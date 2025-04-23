@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动详情 - AI³ 深圳站迷你黑客松</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="slide bg-gradient-to-br from-blue-600 to-indigo-900 text-white">
+        <div class="slide-content">
+            <h1 class="slide-title">
+                <span class="bg-red-500 text-white px-4 py-1 inline-block">活动详情</span>
+            </h1>
+            
+            <div class="flex items-stretch gap-10">
+                <!-- Left Column - Details Card -->
+                <div class="w-1/2">
+                    <div class="card bg-yellow-100 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 h-full">
+                        <div class="flex items-center mb-8">
+                            <div class="bg-black text-white text-5xl p-4 mr-4 border-4 border-yellow-400">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <h2 class="text-4xl font-black">基本信息</h2>
+                        </div>
+                        
+                        <ul class="text-2xl font-bold space-y-8">
+                            <li class="flex items-center">
+                                <div class="bg-red-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 border-2 border-black">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <span>时间：3月30日 13:30-18:30</span>
+                            </li>
+                            
+                            <li class="flex items-center">
+                                <div class="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 border-2 border-black">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <span>地点：深圳南山区前海梦工场</span>
+                            </li>
+                            
+                            <li class="flex items-center">
+                                <div class="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4 border-2 border-black">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <span>人数：30人（2-3人组队）</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Right Column - QR Code and Button -->
+                <div class="w-1/2 flex flex-col">
+                    <div class="flex-1 card bg-blue-100 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 mb-6 flex flex-col items-center justify-center">
+                        <h2 class="text-3xl font-black mb-6">扫码报名参加</h2>
+                        
+                        <div class="bg-white p-4 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] rotate-3 mb-6">
+                            <!-- Replace with actual QR code image when available -->
+
+                            <img src="../public/images/aiweb3dev.jpg" alt="OpenBuild" class="w-32 h-32 object-cover">
+                            <!-- <div class="w-48 h-48 bg-gray-200 flex items-center justify-center text-gray-500">
+                                <i class="fas fa-qrcode text-6xl"></i>
+                            </div> -->
+                        </div>
+                        
+                        <p class="text-xl font-bold">活动名额有限，先到先得！</p>
+                    </div>
+                    
+                    <a href="https://lu.ma/ai-web3" target="_blank" class="btn bg-black text-white text-2xl py-4 px-8 border-4 border-white shadow-[5px_5px_0px_0px_rgba(255,255,255,0.7)] hover:shadow-[3px_3px_0px_0px_rgba(255,255,255,0.7)] transform hover:translate-y-1 hover:translate-x-1 transition-all w-full text-center">
+                        <i class="fas fa-external-link-alt mr-2"></i> 点击报名
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

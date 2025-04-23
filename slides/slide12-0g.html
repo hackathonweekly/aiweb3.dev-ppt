@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0G 赞助商致辞 - AI³ 深圳站迷你黑客松</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* 铺满屏幕样式 */
+        .slide {
+            height: 100vh !important;
+            width: 100vw !important;
+            overflow: hidden !important;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+        .slide-content {
+            height: 100% !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            padding: 2rem !important;
+        }
+        /* 动画效果 */
+        .logo-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .logo-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255,255,255,0) 0%,
+                rgba(255,255,255,0.8) 50%,
+                rgba(255,255,255,0) 100%
+            );
+            transform: rotate(45deg);
+            animation: shine 4s infinite;
+        }
+        @keyframes shine {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+        /* 渐变背景 */
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide bg-white text-black">
+        <div class="slide-content">
+            <h1 class="slide-title mb-8">
+                <span class="bg-blue-600 text-white px-4 py-1 inline-block rotate-1 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,0.5)]">赞助商致辞</span>
+            </h1>
+            
+            <div class="flex-1 flex flex-col items-center justify-center">
+                <!-- 0G Logo and Introduction -->
+                <div class="logo-shine bg-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1 mb-8 w-full max-w-2xl">
+                    <div class="flex flex-col items-center">
+                        <img src="../public/images/sponsors/0g.svg" alt="0G" class="h-32 mb-6">
+                        <h2 class="text-3xl font-bold mb-2">0g.ai</h2>
+                        <p class="text-lg font-medium text-center">全球最大的AI Layer1区块链</p>
+                    </div>
+                </div>
+                
+                <!-- 0G Speech Time Indicator -->
+                <div class="gradient-bg p-6 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 w-full max-w-3xl text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-center">
+                        <span class="bg-yellow-300 px-3 py-1 inline-block transform rotate-1 border-2 border-black">赞助商致辞时间</span>
+                    </h3>
+                    
+                    <div class="text-lg flex flex-col items-center">
+                        <p class="mb-6 text-xl font-bold">0g 代表致辞</p>
+                        
+                        <div class="mb-4 p-3 bg-blue-100 border-2 border-black rounded-md inline-block">
+                            <p class="font-medium">时间：约 2-3 分钟</p>
+                        </div>
+                        
+                        <div class="flex items-center justify-center my-3">
+                            <div class="w-3 h-3 bg-black rounded-full mx-1 animate-ping"></div>
+                            <div class="w-3 h-3 bg-black rounded-full mx-1 animate-ping" style="animation-delay: 0.2s"></div>
+                            <div class="w-3 h-3 bg-black rounded-full mx-1 animate-ping" style="animation-delay: 0.4s"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="bg-black text-white p-4 mt-8 border-4 border-blue-400 transform rotate-1 w-full">
+                <div class="flex justify-center items-center">
+                    <p class="font-bold text-xl">
+                        <i class="fas fa-globe mr-2"></i> 官网：<a href="https://0g.ai" class="underline hover:text-blue-300">0g.ai</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

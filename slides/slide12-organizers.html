@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联合主办方 - AI³ 深圳站迷你黑客松</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Override default styles to make content fill screen */
+        .slide {
+            overflow: hidden !important;
+            height: 100vh !important;
+            width: 100vw !important;
+        }
+        body {
+            overflow: hidden !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .slide-content {
+            height: 100% !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        .organizers-container {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide bg-white text-black">
+        <div class="slide-content py-10">
+            <h1 class="slide-title">
+                <span class="bg-blue-600 text-white px-4 py-1 inline-block rotate-1 border-4 border-black">联合主办方</span>
+            </h1>
+            
+            <div class="organizers-container w-full px-4">
+                <!-- Main Organizers Section -->
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold mb-6 text-center">
+                        <span class="bg-black text-white px-4 py-1 inline-block transform -rotate-1 border-4 border-black">联合主办方</span>
+                    </h2>
+                    
+                    <div class="flex justify-center items-center gap-10 mb-12">
+                        <div class="bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
+                            <img src="../public/images/HackathonWeekly/logo.png" alt="周周黑客松" class="h-20">
+                        </div>
+                        
+                        <div class="text-5xl font-black text-black">+</div>
+                        
+                        <div class="bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+                            <img src="../public/images/openbuild/OpenBuild Logo Black-JPG.jpg" alt="OpenBuild" class="h-20">
+                        </div>
+                    </div>
+                    
+                    <!-- Organizer Descriptions -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- HackathonWeekly Description (先显示周周黑客松) -->
+                        <div class="bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
+                            <h3 class="text-2xl font-bold mb-4 text-center">
+                                <span class="bg-yellow-300 px-3 py-1 inline-block transform -rotate-1 border-2 border-black">周周黑客松</span>
+                            </h3>
+                            <p class="mb-4">周周黑客松是一个 AI 产品创造者社区，致力于帮助创造者从 0 到 1 实现最小可行产品 MVP，并快速找到他们的前 100 个用户，享受创造的乐趣。</p>
+                            <p class="font-bold mt-4">Slogan：花 1 周时间，创造 1 个最小可行产品，解决 1 个生活痛点，也许就是下 1 个改变世界的起点。</p>
+                        </div>
+                        
+                        <!-- OpenBuild Description (后显示OpenBuild) -->
+                        <div class="bg-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+                            <h3 class="text-2xl font-bold mb-4 text-center">
+                                <span class="bg-yellow-300 px-3 py-1 inline-block transform rotate-1 border-2 border-black">OpenBuild</span>
+                            </h3>
+                            <p class="mb-4">OpenBuild 是一个面向 Web3 开发者的开源社区。我们致力于为开发者提供高质量的系统性内容和活动，同时连接 Web2 和 Web3，帮助开发者在 Web3 取得成功。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

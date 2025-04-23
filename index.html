@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI³ 深圳站迷你黑客松</title>
+    <!-- Favicon -->
+    <link rel="icon" href="public/icon.svg" type="image/svg+xml">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-white">
+    <div class="presentation-container">
+        <!-- Left Navigation Menu -->
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="text-xl font-bold p-4">幻灯片导航</h3>
+                <button id="closeSidebar" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="sidebar-menu">
+                <li data-slide="1" class="active">封面页</li>
+                <li data-slide="2">活动介绍</li>
+                <li data-slide="3">活动主题</li>
+                <li data-slide="4">活动详情</li>
+                <li data-slide="5">活动流程</li>
+                <li data-slide="6">参与人群</li>
+                <li data-slide="7">参与收获</li>
+                <li data-slide="8">组队指南</li>
+                <li data-slide="9">技术导师介绍</li>
+                <li data-slide="10">奖项设置</li>
+                <li data-slide="11">代码提交</li>
+                <li data-slide="12">合作伙伴</li>
+                <li data-slide="13">联系我们</li>
+                <li data-slide="14">颁奖典礼</li>
+                <li data-slide="14a">一等奖</li>
+                <li data-slide="14b">二等奖</li>
+                <li data-slide="14c">三等奖</li>
+                <li data-slide="14d">参与奖</li>
+                <li data-slide="15">感谢参与</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Controls -->
+            <div class="controls">
+                <button id="openSidebar" class="control-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <button id="fullscreenBtn" class="control-btn">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+            
+            <!-- Slide Container (iframe) -->
+            <div class="slide-container">
+                <iframe id="slideFrame" src="slides/slide1.html" frameborder="0" scrolling="yes"></iframe>
+            </div>
+            
+            <!-- Bottom Navigation Controls -->
+            <div class="bottom-controls">
+                <button id="prevBtn" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div id="slideIndicator" class="slide-indicator">1 / 19</div>
+                <button id="nextBtn" class="nav-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/insert-script-in-slides.js"></script>
+</body>
+</html>

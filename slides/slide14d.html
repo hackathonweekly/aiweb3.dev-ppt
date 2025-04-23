@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参与奖 - AI³ 深圳站迷你黑客松</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #f00;
+            animation: confetti-fall 5s ease-in-out infinite;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+        }
+        
+        .gift-glow {
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #A020F0, 0 0 20px #A020F0;
+            }
+            to {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #A020F0, 0 0 40px #A020F0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide bg-white text-black">
+        <div class="slide-content">
+            <h1 class="slide-title">
+                <span class="bg-purple-500 text-white px-4 py-1 inline-block rotate-2 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,0.5)]">参与奖</span>
+            </h1>
+            
+            <!-- Decorative confetti elements -->
+            <div class="confetti bg-purple-300" style="left: 10%; animation-delay: 0.5s;"></div>
+            <div class="confetti bg-purple-400" style="left: 20%; animation-delay: 1.2s;"></div>
+            <div class="confetti bg-purple-500" style="left: 30%; animation-delay: 0.7s;"></div>
+            <div class="confetti bg-purple-300" style="left: 40%; animation-delay: 2.1s;"></div>
+            <div class="confetti bg-purple-400" style="left: 60%; animation-delay: 1.5s;"></div>
+            <div class="confetti bg-purple-500" style="left: 70%; animation-delay: 0.3s;"></div>
+            <div class="confetti bg-purple-300" style="left: 80%; animation-delay: 1.8s;"></div>
+            <div class="confetti bg-purple-400" style="left: 90%; animation-delay: 0.9s;"></div>
+            
+            <div class="flex flex-col items-center justify-center mt-4">
+                <!-- Award Icon -->
+                <div class="mb-6 text-center">
+                    <i class="fas fa-gifts gift-glow text-purple-500 text-9xl"></i>
+                </div>
+                
+                <!-- Award Details -->
+                <div class="bg-purple-100 p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1 w-3/4 max-w-3xl">
+                    <h2 class="text-5xl font-black mb-6 text-center">参与奖</h2>
+                    
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-center">纪念 NFT</h3>
+                            <div class="bg-purple-200 p-6 border-4 border-black mb-4 flex items-center justify-center">
+                                <i class="fas fa-certificate text-8xl text-purple-600"></i>
+                            </div>
+                            <p class="text-lg text-center">每位参与者将获得黑客松纪念 NFT，作为参与本次活动的证明</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-3xl font-bold mb-4 text-center">随机空投</h3>
+                            <div class="bg-purple-200 p-6 border-4 border-black mb-4 flex items-center justify-center">
+                                <i class="fas fa-parachute-box text-8xl text-purple-600"></i>
+                            </div>
+                            <p class="text-lg text-center">有机会获得赞助商提供的随机空投奖励</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Community Info -->
+                <div class="bg-purple-400 p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 mt-8 w-3/4 max-w-3xl">
+                    <h3 class="text-2xl font-bold mb-3 text-white">社区邀请</h3>
+                    <p class="text-xl text-white mb-4">所有参与者将被邀请加入「AI+Web3 开发者社区」，享受以下福利：</p>
+                    <ul class="space-y-2 text-white">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2"></i>
+                            <span>AI+Web3 技术交流资源</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2"></i>
+                            <span>优先参与后续线上与线下活动</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle mt-1 mr-2"></i>
+                            <span>赞助商提供的生态资源与工具</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
