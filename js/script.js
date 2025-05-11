@@ -1,6 +1,6 @@
 // Variables
 let currentSlide = 1;
-const totalSlides = 20;
+const totalSlides = 22;
 const slideFrame = document.getElementById('slideFrame');
 const slideIndicator = document.getElementById('slideIndicator');
 const sidebar = document.getElementById('sidebar');
@@ -15,36 +15,36 @@ const menuItems = document.querySelectorAll('.sidebar-menu li');
 // '4' 内容没必要，隐藏掉
 // All slide identifiers in order
 const slideIds = [
-    '1', '2', 
+    '1', '2',
     '12-organizers', '12-sponsors', '12-0g',
-    '3',  '5', '6', '7',  '9', '10', 
+    '3',  '5', '6', '7',  '9', '9a', '10',
     '11', '8', 'team-formation',
-    '14', '14d', '14c', '14b', '14a', '13', '15',
+    '14', '14d', '14c', '14b', '14a', '14e', '13', '15',
 ];
 
 // Functions
 function loadSlide(slideIndex) {
     let adjustedIndex = slideIndex;
-    
+
     // Ensure slide index is within bounds
     if (adjustedIndex < 0) {
         adjustedIndex = 0;
     } else if (adjustedIndex >= slideIds.length) {
         adjustedIndex = slideIds.length - 1;
     }
-    
+
     // Update current slide
     currentSlide = adjustedIndex;
-    
+
     // Get the slide ID
     const slideId = slideIds[adjustedIndex];
-    
+
     // Load slide in iframe
     slideFrame.src = `slides/slide${slideId}.html`;
-    
+
     // Update slide indicator
     slideIndicator.textContent = `${adjustedIndex + 1} / ${totalSlides}`;
-    
+
     // Update active menu item
     for (const item of menuItems) {
         if (item.getAttribute('data-slide') === slideId) {

@@ -3,147 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技术导师介绍 - AI³ 深圳站迷你黑客松</title>
+    <title>主持人介绍 - AI³ 上海站迷你黑客松</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .copy-tooltip {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .copy-tooltip.show {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
+    <!-- 复制提示框 -->
+    <div id="copyTooltip" class="copy-tooltip"></div>
+
+    <script>
+        function copyToClipboard(text, message) {
+            // 复制文本到剪贴板
+            navigator.clipboard.writeText(text).then(function() {
+                // 显示提示框
+                const tooltip = document.getElementById('copyTooltip');
+                tooltip.textContent = message;
+                tooltip.classList.add('show');
+
+                // 1秒后隐藏提示框
+                setTimeout(function() {
+                    tooltip.classList.remove('show');
+                }, 1000);
+            }).catch(function(err) {
+                console.error('无法复制文本: ', err);
+                alert('复制失败，请手动复制: ' + text);
+            });
+        }
+    </script>
     <div class="slide bg-white text-black">
         <div class="slide-content">
             <h1 class="slide-title">
-                <span class="bg-blue-600 text-white px-4 py-1 inline-block rotate-1 border-4 border-black">技术导师介绍</span>
+                <span class="bg-blue-600 text-white px-4 py-1 inline-block rotate-1 border-4 border-black">主持人介绍</span>
             </h1>
-            
-            <div class="grid grid-cols-3 gap-8 mt-10">
-                <!-- Mentor 1: Jackie -->
+
+            <div class="grid grid-cols-2 gap-8 mt-10">
+                <!-- Host: Ian -->
                 <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
                     <!-- Profile Picture -->
                     <div class="mb-6 relative">
                         <div class="w-40 h-40 rounded-full bg-blue-200 mx-auto border-4 border-black overflow-hidden">
-                            <!-- Replace with actual photo if available -->
-                            <div class="w-full h-full flex items-center justify-center bg-blue-500">
-                                <i class="fas fa-user text-6xl text-white"></i>
-                            </div>
+                            <!-- Ian's photo -->
+                            <img src="../public/images/jiabin/ian.jpg" alt="Ian" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute -right-3 -bottom-3 bg-yellow-400 rounded-full p-3 border-4 border-black">
                             <i class="fas fa-microphone text-2xl"></i>
                         </div>
                     </div>
-                    
+
                     <!-- Info -->
-                    <h3 class="text-2xl font-black text-center mb-2">Jackie</h3>
+                    <h3 class="text-2xl font-black text-center mb-2">Ian</h3>
                     <p class="bg-blue-100 text-center py-1 mb-4 border-2 border-black font-bold">活动主持人</p>
-                    
-                    <p class="text-center mb-4">周周黑客松发起人，AI 产品开发者社区组织者</p>
-                    
+
+                    <p class="text-center mb-4">OpenBuild Co-Founder</p>
+
                     <div class="flex justify-center space-x-3 mb-4">
-                        <a href="#" class="bg-blue-500 text-white p-2 rounded-full border-2 border-black">
+                        <a href="https://twitter.com/imxy007" target="_blank" class="bg-blue-500 text-white p-2 rounded-full border-2 border-black">
                             <i class="fab fa-twitter"></i>
                         </a>
                         <a href="#" class="bg-blue-700 text-white p-2 rounded-full border-2 border-black">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/jackiexiao" target="_blank" class="bg-black text-white p-2 rounded-full border-2 border-black">
+                        <a href="#" class="bg-black text-white p-2 rounded-full border-2 border-black">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="#" class="bg-green-500 text-white p-2 rounded-full border-2 border-black">
                             <i class="fab fa-weixin"></i>
                         </a>
                     </div>
-                    
-                    <a href="https://hackathonweekly.feishu.cn/wiki/LNjiwNC7vi7CwWkKs0YcmT7vnBc" target="_blank" class="block w-full bg-blue-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-blue-600 transition">
-                        <i class="fas fa-link mr-2"></i>社区介绍 + Cursor 案例
+
+                    <a href="https://twitter.com/imxy007" target="_blank" class="block w-full bg-blue-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-blue-600 transition">
+                        <i class="fab fa-twitter mr-2"></i>Twitter
                     </a>
                 </div>
-                
-                <!-- Mentor 2: Alfred -->
+
+                <!-- Co-Host: Sunny -->
                 <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
                     <!-- Profile Picture -->
                     <div class="mb-6 relative">
                         <div class="w-40 h-40 rounded-full bg-blue-200 mx-auto border-4 border-black overflow-hidden">
-                            <!-- Replace with actual photo if available -->
-                            <div class="w-full h-full flex items-center justify-center bg-red-500">
-                                <i class="fas fa-user text-6xl text-white"></i>
-                            </div>
+                            <!-- Sunny's photo -->
+                            <img src="../public/images/jiabin/sunny.jpg" alt="Sunny" class="w-full h-full object-cover">
                         </div>
-                        <div class="absolute -right-3 -bottom-3 bg-green-400 rounded-full p-3 border-4 border-black">
-                            <i class="fas fa-robot text-2xl"></i>
+                        <div class="absolute -right-3 -bottom-3 bg-pink-400 rounded-full p-3 border-4 border-black">
+                            <i class="fas fa-microphone-alt text-2xl"></i>
                         </div>
                     </div>
-                    
+
                     <!-- Info -->
-                    <h3 class="text-2xl font-black text-center mb-2">Alfred</h3>
-                    <p class="bg-red-100 text-center py-1 mb-4 border-2 border-black font-bold">技术导师</p>
-                    
-                    <p class="text-center mb-4 font-bold text-red-500">《用AI打开Web3新世界大门》</p>
-                    
-                    <p class="text-center mb-4">BnB3DAO co-founder, 渴望早日被AI取代的程序员 </p>
-                    
+                    <h3 class="text-2xl font-black text-center mb-2">Sunny</h3>
+                    <p class="bg-pink-100 text-center py-1 mb-4 border-2 border-black font-bold">联合主持人</p>
+
+                    <p class="text-center mb-4">Hackathon Weekly上海主理人，AI心理社区app创始人，文转商转码的多模态语言开发者、Hedy编程教育中国区负责人</p>
+
                     <div class="flex justify-center space-x-3 mb-4">
-                        <a href="#" class="bg-blue-500 text-white p-2 rounded-full border-2 border-black">
-                            <i class="fab fa-github"></i>
+                        <a href="https://aliveme.club" target="_blank" class="bg-blue-500 text-white p-2 rounded-full border-2 border-black">
+                            <i class="fas fa-globe"></i>
                         </a>
-                        <a href="#" class="bg-blue-700 text-white p-2 rounded-full border-2 border-black">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="javascript:void(0)" onclick="copyToClipboard('sunnyz689@163.com', '已复制邮箱：sunnyz689@163.com')" class="bg-red-500 text-white p-2 rounded-full border-2 border-black">
+                            <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="#" class="bg-green-500 text-white p-2 rounded-full border-2 border-black">
+                        <a href="https://hedy.org" target="_blank" class="bg-purple-500 text-white p-2 rounded-full border-2 border-black">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="copyToClipboard('sunnyz689', '已复制微信号：sunnyz689')" class="bg-green-500 text-white p-2 rounded-full border-2 border-black" title="微信: sunnyz689">
                             <i class="fab fa-weixin"></i>
                         </a>
                     </div>
-                    
-                    <a href="https://www.canva.com/design/DAGjKYkR18s/8bvp5ZH5Ypvdy9NGmrLFBw/view?utm_content=DAGjKYkR18s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h40a656e28c" target="_blank" class="block w-full bg-red-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-red-600 transition">
-                        <i class="fas fa-link mr-2"></i>查看分享PPT
-                    </a>
-                </div>
-                
-                <!-- Mentor 3: Jeason -->
-                <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
-                    <!-- Profile Picture -->
-                    <div class="mb-6 relative">
-                        <div class="w-40 h-40 rounded-full bg-blue-200 mx-auto border-4 border-black overflow-hidden">
-                            <!-- Replace with actual photo if available -->
-                            <div class="w-full h-full flex items-center justify-center bg-purple-500">
-                                <i class="fas fa-user text-6xl text-white"></i>
-                            </div>
-                        </div>
-                        <div class="absolute -right-3 -bottom-3 bg-blue-400 rounded-full p-3 border-4 border-black">
-                            <i class="fas fa-code text-2xl"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- Info -->
-                    <h3 class="text-2xl font-black text-center mb-2">Jeason</h3>
-                    <p class="bg-purple-100 text-center py-1 mb-4 border-2 border-black font-bold">技术导师</p>
-                    
-                    <p class="text-center mb-4 font-bold text-purple-500">《Web2开发如何转行到Web3》</p>
-                    
-                    <p class="text-center mb-4">资深Web3开发者，智能合约专家</p>
-                    
-                    <div class="flex justify-center space-x-3 mb-4">
-                        <a href="#" class="bg-blue-500 text-white p-2 rounded-full border-2 border-black">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="bg-blue-700 text-white p-2 rounded-full border-2 border-black">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="bg-green-500 text-white p-2 rounded-full border-2 border-black">
-                            <i class="fab fa-weixin"></i>
-                        </a>
-                    </div>
-                    
-                    <a href="https://gamma.app/docs/Web2-Web3-lqtlv4k9esvc95b?mode=doc" target="_blank" class="block w-full bg-purple-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-purple-600 transition">
-                        <i class="fas fa-link mr-2"></i>查看分享PPT
+
+                    <a href="https://aliveme.club" target="_blank" class="block w-full bg-pink-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-pink-600 transition">
+                        <i class="fas fa-link mr-2"></i>个人主页
                     </a>
                 </div>
             </div>
-            
+
             <!-- Bottom Banner -->
             <div class="mt-10 bg-white text-black p-4 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center transform -rotate-1">
-                <p class="text-2xl font-bold"><i class="fas fa-star text-yellow-500 mr-2"></i> 与行业专家面对面交流，获取一手经验分享！</p>
+                <p class="text-2xl font-bold"><i class="fas fa-star text-yellow-500 mr-2"></i> 由专业主持人带领，让您的黑客松体验更加精彩！</p>
             </div>
         </div>
     </div>

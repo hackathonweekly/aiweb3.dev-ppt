@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术导师介绍 - AI³ 上海站迷你黑客松</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .copy-tooltip {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .copy-tooltip.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 复制提示框 -->
+    <div id="copyTooltip" class="copy-tooltip"></div>
+
+    <script>
+        function copyToClipboard(text, message) {
+            // 复制文本到剪贴板
+            navigator.clipboard.writeText(text).then(function() {
+                // 显示提示框
+                const tooltip = document.getElementById('copyTooltip');
+                tooltip.textContent = message;
+                tooltip.classList.add('show');
+
+                // 1秒后隐藏提示框
+                setTimeout(function() {
+                    tooltip.classList.remove('show');
+                }, 1000);
+            }).catch(function(err) {
+                console.error('无法复制文本: ', err);
+                alert('复制失败，请手动复制: ' + text);
+            });
+        }
+    </script>
+    <div class="slide bg-white text-black">
+        <div class="slide-content">
+            <h1 class="slide-title">
+                <span class="bg-blue-600 text-white px-4 py-1 inline-block rotate-1 border-4 border-black">技术导师介绍</span>
+            </h1>
+
+            <div class="grid grid-cols-2 gap-8 mt-10">
+                <!-- Mentor 1: Wind -->
+                <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
+                    <!-- Profile Picture -->
+                    <div class="mb-6 relative">
+                        <div class="w-40 h-40 rounded-full bg-blue-200 mx-auto border-4 border-black overflow-hidden">
+                            <!-- Wind's photo -->
+                            <img src="../public/images/jiabin/wind.jpg" alt="Wind" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -right-3 -bottom-3 bg-green-400 rounded-full p-3 border-4 border-black">
+                            <i class="fas fa-robot text-2xl"></i>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <h3 class="text-2xl font-black text-center mb-2">Wind / 吴杭</h3>
+                    <p class="bg-green-100 text-center py-1 mb-4 border-2 border-black font-bold">AI技术导师</p>
+
+                    <p class="text-center mb-4">18年老游戏玩家，2年AI新玩家，朝着游戏化人生的道路探索</p>
+
+                    <div class="flex justify-center space-x-3 mb-4">
+                        <a href="https://aliveme.club" target="_blank" class="bg-blue-500 text-white p-2 rounded-full border-2 border-black">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://github.com/cosmowind" target="_blank" class="bg-black text-white p-2 rounded-full border-2 border-black">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="javascript:void(0)" onclick="copyToClipboard('pi314159265358975', '已复制微信号：pi314159265358975')" class="bg-green-500 text-white p-2 rounded-full border-2 border-black" title="微信: pi314159265358975">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                    </div>
+
+                    <a href="https://aliveme.club" target="_blank" class="block w-full bg-green-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-green-600 transition">
+                        <i class="fas fa-link mr-2"></i>个人主页
+                    </a>
+                </div>
+
+                <!-- Mentor 2: Jason -->
+                <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+                    <!-- Profile Picture -->
+                    <div class="mb-6 relative">
+                        <div class="w-40 h-40 rounded-full bg-blue-200 mx-auto border-4 border-black overflow-hidden">
+                            <!-- Jason's photo -->
+                            <img src="../public/images/jiabin/jason.jpg" alt="Jason" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -right-3 -bottom-3 bg-purple-400 rounded-full p-3 border-4 border-black">
+                            <i class="fas fa-code text-2xl"></i>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <h3 class="text-2xl font-black text-center mb-2">Jason</h3>
+                    <p class="bg-purple-100 text-center py-1 mb-4 border-2 border-black font-bold">Web3技术导师</p>
+
+                    <p class="text-center mb-4">以太坊合约开发 交易小韭菜</p>
+
+                    <div class="flex justify-center space-x-3 mb-4">
+                        <a href="https://github.com/0xouzm" target="_blank" class="bg-black text-white p-2 rounded-full border-2 border-black">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="bg-blue-700 text-white p-2 rounded-full border-2 border-black">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="bg-green-500 text-white p-2 rounded-full border-2 border-black">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                    </div>
+
+                    <a href="https://github.com/0xouzm" target="_blank" class="block w-full bg-purple-500 text-white text-center py-2 border-2 border-black font-bold hover:bg-purple-600 transition">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Banner -->
+            <div class="mt-10 bg-white text-black p-4 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] text-center transform -rotate-1">
+                <p class="text-2xl font-bold"><i class="fas fa-star text-yellow-500 mr-2"></i> 与行业专家面对面交流，获取一手经验分享！</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
