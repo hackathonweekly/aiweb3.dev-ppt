@@ -1,7 +1,7 @@
 // PPT 项目配置文件
 // 创建新的 PPT 项目后，请在这里添加项目信息和文件列表
 window.pptProjects = {
-    'aiweb3-hackathon-shenzhen': {
+    'shenzhen': {
         name: 'AI³ 深圳站迷你黑客松',
         description: 'AI+Web3黑客松活动演示文稿',
         badge: '活动',
@@ -23,6 +23,29 @@ window.pptProjects = {
             '14-awards-ceremony.html',
             '15-team-formation.html',
             '16-thanks.html'
+        ]
+    },
+    'guangzhou': {
+        name: 'AI³ 广州站迷你黑客松',
+        description: 'Build your first AI Agent on Web3 Infra',
+        badge: '活动',
+        badgeClass: 'event',
+        files: [
+            '01-cover.html',
+            '02-introduction.html',
+            '03-theme.html',
+            '04-details.html',
+            '05-schedule.html',
+            '06-participants.html',
+            '07-benefits.html',
+            '08-team-guide.html',
+            '09-mentors.html',
+            '10-awards.html',
+            '11-submission.html',
+            '12-partners.html',
+            '13-contact.html',
+            '14-awards-ceremony.html',
+            '15-thanks.html'
         ]
     },
     'default': {
