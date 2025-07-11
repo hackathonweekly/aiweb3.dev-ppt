@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>代码提交 - AI³ 深圳站迷你黑客松</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="slide bg-gradient-to-br from-blue-600 to-indigo-900 text-white">
+        <div class="slide-content">
+            <h1 class="slide-title text-white border-white">
+                <span class="bg-blue-500 px-4 py-1 inline-block rotate-1 border-2 border-white">代码提交指南</span>
+            </h1>
+            
+            <div class="grid grid-cols-2 gap-10 mt-8">
+                <!-- Left Column: GitHub Submission -->
+                <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-black text-white p-4 rounded-full border-4 border-blue-500 mr-4">
+                            <i class="fab fa-github text-4xl"></i>
+                        </div>
+                        <h2 class="text-3xl font-black">GitHub 代码提交流程</h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold border-2 border-black mr-3 flex-shrink-0 mt-1">1</div>
+                            <div>
+                                <p class="text-lg font-bold">Fork官方仓库</p>
+                                <p class="text-gray-700">访问 <code class="bg-gray-200 px-1 py-0.5 rounded">github.com/openbuildxyz/ai-web3-growth-journey</code> 并点击 Fork</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold border-2 border-black mr-3 flex-shrink-0 mt-1">2</div>
+                            <div>
+                                <p class="text-lg font-bold">克隆Fork后的仓库</p>
+                                <div class="bg-gray-800 text-green-400 p-2 rounded-md text-sm mt-1 font-mono">
+                                    git clone https://github.com/你的用户名/ai-web3-growth-journey.git<br>
+                                    cd ai-web3-growth-journey
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold border-2 border-black mr-3 flex-shrink-0 mt-1">3</div>
+                            <div>
+                                <p class="text-lg font-bold">创建新分支</p>
+                                <div class="bg-gray-800 text-green-400 p-2 rounded-md text-sm mt-1 font-mono">
+                                    git checkout -b 团队名-project
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold border-2 border-black mr-3 flex-shrink-0 mt-1">4</div>
+                            <div>
+                                <p class="text-lg font-bold">添加项目文件</p>
+                                <p class="text-gray-700">在 <code class="bg-gray-200 px-1 py-0.5 rounded">projects/2025-03/团队名/</code> 目录下添加项目文件</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-500 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold border-2 border-black mr-3 flex-shrink-0 mt-1">5</div>
+                            <div>
+                                <p class="text-lg font-bold">提交更改并创建PR</p>
+                                <div class="bg-gray-800 text-green-400 p-2 rounded-md text-sm mt-1 font-mono">
+                                    git add .<br>
+                                    git commit -m "Add 团队名 project"<br>
+                                    git push origin 团队名-project
+                                </div>
+                                <p class="text-gray-700 mt-1">然后创建Pull Request</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Submission Requirements -->
+                <div class="flex flex-col space-y-6">
+                    <!-- Required Files -->
+                    <div class="bg-white text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
+                        <h3 class="text-2xl font-black mb-4 border-b-4 border-black pb-2">必须提交的文件</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-file-alt text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg"><code class="bg-gray-200 px-1 py-0.5 rounded">README.md</code>: 项目介绍、团队信息、技术实现</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-file-code text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg"><code class="bg-gray-200 px-1 py-0.5 rounded">contracts/</code>: 智能合约代码</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-file-code text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg"><code class="bg-gray-200 px-1 py-0.5 rounded">frontend/</code> (可选): 前端代码</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-file-code text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg"><code class="bg-gray-200 px-1 py-0.5 rounded">frontend/</code> (可选): PPT，参考<a href="https://hackathonweekly.feishu.cn/wiki/EgC4wn9e5i3BxUkaDIOcm3g8nAh" target="_blank" class="text-blue-600 hover:underline">教程</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-file-alt text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg"><code class="bg-gray-200 px-1 py-0.5 rounded">demo.md</code>: 包含Demo链接和截图</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-file-alt text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg"><code class="bg-gray-200 px-1 py-0.5 rounded">prompts.md</code>: 记录与AI助手的关键提示词交互</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Evaluation Requirements -->
+                    <div class="bg-blue-100 text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">
+                        <h3 class="text-2xl font-black mb-4 border-b-4 border-black pb-2">提交要求</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg">代码必须包含详细注释，特别说明AI生成部分</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg">记录与AI的关键交互提示词，展示AI如何帮助完成项目</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg">必须提交完整的README.md说明</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xl"></i>
+                                <span class="text-lg">创建展示页面，包含项目概述与技术实现</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Deadline -->
+                    <div class="bg-red-100 text-black p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform rotate-1">
+                        <div class="flex items-center">
+                            <div class="bg-red-500 text-white p-4 rounded-full border-4 border-black mr-4">
+                                <i class="fas fa-hourglass-end text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-black">截止时间 17:10 !</h3>
+                                <p class="text-xl font-bold text-red-600">演示前10分钟必须完成提交</p>
+                                <p class="text-lg">逾期提交可能不被接受评审</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
