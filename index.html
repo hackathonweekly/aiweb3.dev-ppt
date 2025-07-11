@@ -74,6 +74,10 @@
                             <i class="fas fa-file-pdf"></i>
                             <span>导出PDF</span>
                         </button>
+                        <button class="sidebar-function-btn" onclick="showHackathonInfo()" title="黑客松信息">
+                            <i class="fas fa-info-circle"></i>
+                            <span>黑客松信息</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -231,6 +235,58 @@
         </div>
     </div>
 
+    <!-- 黑客松信息弹窗 -->
+    <div id="hackathon-info-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🚀 AI³ 黑客松信息</h3>
+                <button class="modal-close" onclick="closeHackathonInfo()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="hackathon-info-content">
+                    <div class="info-section">
+                        <h4><i class="fas fa-globe"></i> 线上演示地址</h4>
+                        <p>深圳场黑客松PPT在线版本：</p>
+                        <a href="https://aiweb3-ppt.netlify.app/" target="_blank" class="info-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            https://aiweb3-ppt.netlify.app/
+                        </a>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h4><i class="fab fa-github"></i> 源代码仓库</h4>
+                        <p>获取完整源代码和最新更新：</p>
+                        <a href="https://github.com/hackathonweekly/aiweb3.dev-ppt" target="_blank" class="info-link">
+                            <i class="fab fa-github"></i>
+                            https://github.com/hackathonweekly/aiweb3.dev-ppt
+                        </a>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h4><i class="fas fa-book"></i> 制作教程</h4>
+                        <p>学习如何用AI工具制作专业PPT：</p>
+                        <a href="https://hackathonweekly.feishu.cn/wiki/EgC4wn9e5i3BxUkaDIOcm3g8nAh" target="_blank" class="info-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            十分钟用 Cursor 打造高颜值的类 PPT 网站
+                        </a>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h4><i class="fas fa-lightbulb"></i> 使用提示</h4>
+                        <ul class="tips-list">
+                            <li>本地使用：直接打开 index.html 文件即可</li>
+                            <li>支持AI生成：使用Cursor、Trae等AI编辑器快速创建PPT</li>
+                            <li>响应式设计：完美适配桌面、平板和手机设备</li>
+                            <li>零依赖：无需安装任何软件或工具</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 移动端底部导航 -->
     <div class="mobile-nav">
         <button class="mobile-nav-btn" onclick="prevSlide()">
@@ -281,4 +337,4 @@
         });
     </script>
 </body>
-</html> 
+</html>

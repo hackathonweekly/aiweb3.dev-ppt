@@ -570,6 +570,21 @@ function closeHelp() {
     }
 }
 
+// 黑客松信息弹窗
+function showHackathonInfo() {
+    const modal = document.getElementById('hackathon-info-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+function closeHackathonInfo() {
+    const modal = document.getElementById('hackathon-info-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
 // 欢迎界面
 function startTutorial() {
     closeWelcome();

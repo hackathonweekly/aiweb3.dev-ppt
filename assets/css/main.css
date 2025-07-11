@@ -1364,6 +1364,96 @@ button {
     gap: var(--spacing-md);
 }
 
+/* 黑客松信息模态框样式 */
+.hackathon-info-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.info-section {
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background-color: var(--surface-color);
+    transition: all var(--duration-fast) ease;
+}
+
+.info-section:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.info-section h4 {
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.info-section h4 i {
+    font-size: var(--font-size-xl);
+}
+
+.info-section p {
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.info-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all var(--duration-fast) ease;
+    word-break: break-all;
+}
+
+.info-link:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tips-list li {
+    padding: var(--spacing-sm) 0;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.tips-list li:before {
+    content: "✨";
+    font-size: var(--font-size-md);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+#hackathon-info-modal .modal-content {
+    max-width: 600px;
+    max-height: 85vh;
+}
+
 .shortcut-item {
     display: flex;
     align-items: center;
