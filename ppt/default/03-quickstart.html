@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快速开始</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 60px 80px;
+            overflow: hidden;
+            position: relative;
+        }
+        .method-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .method-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        .method-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.4;
+            overflow-x: auto;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .highlight {
+            background: linear-gradient(45deg, #10b981, #059669);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .step-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 标题部分 -->
+        <div class="text-center mb-8">
+            <h1 class="text-5xl font-bold header-gradient mb-4">
+                🚀 快速开始
+            </h1>
+            <p class="text-xl text-gray-700 font-light">
+                使用 AI 编辑器创建专业PPT
+            </p>
+        </div>
+        
+        <!-- 主要内容区域 -->
+        <div class="grid grid-cols-2 gap-8">
+            <!-- 左侧：AI 编辑器介绍 -->
+            <div class="method-card rounded-2xl p-6">
+                <div class="text-center mb-6">
+                    <div class="method-icon text-5xl mb-4">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-2">AI 编辑器</h3>
+                    <span class="highlight">强烈推荐</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="step-card rounded-lg p-4">
+                        <div class="flex items-start">
+                            <span class="inline-block w-8 h-8 bg-blue-500 text-white rounded-full text-sm flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                            <div>
+                                <h4 class="font-medium text-gray-800">在 AI 编辑器中打开项目</h4>
+                                <p class="text-sm text-gray-600">支持 Cursor、Trae、WindSurf 等</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card rounded-lg p-4">
+                        <div class="flex items-start">
+                            <span class="inline-block w-8 h-8 bg-purple-500 text-white rounded-full text-sm flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                            <div>
+                                <h4 class="font-medium text-gray-800">描述你的演示需求</h4>
+                                <p class="text-sm text-gray-600">AI 会自动生成完整的 PPT 文件</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card rounded-lg p-4">
+                        <div class="flex items-start">
+                            <span class="inline-block w-8 h-8 bg-green-500 text-white rounded-full text-sm flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                            <div>
+                                <h4 class="font-medium text-gray-800">更新配置文件</h4>
+                                <p class="text-sm text-gray-600">在 ppt-list.js 中添加新项目</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-card rounded-lg p-4">
+                        <div class="flex items-start">
+                            <span class="inline-block w-8 h-8 bg-orange-500 text-white rounded-full text-sm flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                            <div>
+                                <h4 class="font-medium text-gray-800">刷新浏览器</h4>
+                                <p class="text-sm text-gray-600">立即查看新创建的 PPT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧：AI 提示词示例 -->
+            <div class="method-card rounded-2xl p-6">
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-code text-blue-500 mr-2"></i>
+                        AI 提示词示例
+                    </h3>
+                    <p class="text-sm text-gray-600">直接复制以下提示词对话</p>
+                </div>
+                
+                <div class="code-block">
+                    <div class="text-green-400 mb-2">// 对 AI 说：</div>
+                    <div class="text-blue-300">请基于本HTML PPT模板创建一个关于 [你的主题] 的演示文稿。</div>
+                    <div class="text-gray-400 my-2">
+                        要求：<br>
+                        - 在 ppt/ 文件夹中创建新的项目文件夹<br>
+                        - 使用现代化设计和 Tailwind CSS<br>
+                        - 文件命名：01-cover.html, 02-content.html...<br>
+                        - 16:9比例布局，响应式设计<br>
+                        - 使用真实UI图片（Unsplash等）<br>
+                        - <span class="text-yellow-300">重要：在 ppt-list.js 中添加项目配置</span>
+                    </div>
+                    <div class="text-blue-300 mt-2">
+                        文件结构：ppt/my-presentation/<br>
+                        ├── 01-cover.html<br>
+                        ├── 02-content.html<br>
+                        └── 03-thanks.html<br>
+                    </div>
+                    <div class="text-yellow-300 mt-2">
+                        在 ppt-list.js 中添加：<br>
+                        'my-presentation': { name: '我的演示', files: [...] }
+                    </div>
+                </div>
+                
+                <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                    <div class="flex items-center text-blue-700 text-sm">
+                        <i class="fas fa-lightbulb mr-2"></i>
+                        <span class="font-medium">小贴士：可以要求 AI 添加动画效果和交互元素</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部提示 -->
+        <div class="text-center mt-6">
+            <div class="inline-flex items-center px-6 py-3 bg-white bg-opacity-80 rounded-full shadow-lg">
+                <i class="fas fa-magic text-purple-500 mr-3"></i>
+                <span class="text-gray-700 font-medium">💡 零依赖设计，只需要浏览器即可使用！</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

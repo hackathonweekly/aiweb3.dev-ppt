@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主要特性</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 80px 60px;
+            overflow: hidden;
+            position: relative;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .feature-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-gradient {
+            background: linear-gradient(45deg, #ffffff, #f0f8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 标题部分 -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-white header-gradient mb-4">
+                ✨ 主要特性
+            </h1>
+            <p class="text-xl text-white text-opacity-90 font-light">
+                专为现代演示需求设计的强大功能
+            </p>
+        </div>
+        
+        <!-- 特性网格 -->
+        <div class="grid grid-cols-4 gap-6">
+            <!-- AI 驱动 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">AI 驱动</h3>
+                <p class="text-sm text-gray-600">专为 Cursor、Trae 等AI编辑器优化，让AI帮你创建专业PPT</p>
+            </div>
+            
+            <!-- 开箱即用 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">开箱即用</h3>
+                <p class="text-sm text-gray-600">直接打开index.html即可使用，无需安装任何软件</p>
+            </div>
+            
+            <!-- 模块化设计 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">模块化设计</h3>
+                <p class="text-sm text-gray-600">每个幻灯片独立HTML文件，便于AI生成和管理</p>
+            </div>
+            
+            <!-- 响应式设计 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">响应式设计</h3>
+                <p class="text-sm text-gray-600">完美适配桌面、平板和手机设备</p>
+            </div>
+            
+            <!-- 16:9比例 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-tv"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">16:9比例</h3>
+                <p class="text-sm text-gray-600">专业的PPT显示比例，适合各种演示场景</p>
+            </div>
+            
+            <!-- 现代化UI -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">现代化UI</h3>
+                <p class="text-sm text-gray-600">基于shadcn/ui设计语言，美观简洁</p>
+            </div>
+            
+            <!-- 功能丰富 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">功能丰富</h3>
+                <p class="text-sm text-gray-600">演示计时器、幻灯片概览、快捷键导航等</p>
+            </div>
+            
+            <!-- PDF导出 -->
+            <div class="feature-card rounded-2xl p-6 text-center">
+                <div class="feature-icon text-4xl mb-4">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">PDF导出</h3>
+                <p class="text-sm text-gray-600">支持导出为PDF格式，便于分享和打印</p>
+            </div>
+        </div>
+        
+        <!-- 底部装饰 -->
+        <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-40"></div>
+    </div>
+</body>
+</html> 

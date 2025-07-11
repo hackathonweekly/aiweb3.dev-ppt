@@ -1,0 +1,750 @@
+/**
+ * HTML PPT 模板 - 响应式样式文件
+ * 
+ * 处理不同设备尺寸的样式适配
+ * 桌面端：完整PPT体验
+ * 平板端：适配触摸操作
+ * 手机端：垂直滚动浏览
+ */
+
+/* ===== 平板设备适配 (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+    :root {
+        --sidebar-width: 280px;
+        --font-size-5xl: 2rem;      /* 32px */
+        --font-size-4xl: 1.75rem;   /* 28px */
+        --font-size-3xl: 1.75rem;  /* 28px */
+        --spacing-3xl: 2.5rem;      /* 40px */
+    }
+    
+    .ppt-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: var(--z-sidebar);
+        background-color: var(--background-color);
+        box-shadow: var(--shadow-xl);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    /* 中等屏幕给main-content添加左边距 */
+    .sidebar.open ~ .main-content {
+        margin-left: var(--sidebar-width);
+    }
+    
+    .sidebar-header {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .slide-navigation {
+        max-height: none;
+        flex: 1;
+    }
+    
+    .slide {
+        padding: var(--spacing-lg);
+    }
+    
+    .slide-content {
+        max-width: none;
+    }
+    
+    /* 功能卡片两列显示 */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .cover-features {
+        gap: var(--spacing-lg);
+    }
+    
+    /* 主题展示调整 */
+    .theme-showcase {
+        gap: var(--spacing-md);
+    }
+    
+    /* 行动卡片调整 */
+    .start-actions {
+        gap: var(--spacing-md);
+    }
+    
+    .action-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ===== 手机设备适配 (<768px) ===== */
+@media (max-width: 768px) {
+    :root {
+        --sidebar-width: 100%;
+        --control-bar-height: 50px;
+        --mobile-nav-height: 60px;
+        --font-size-5xl: 2rem;     /* 32px */
+        --font-size-4xl: 1.75rem;  /* 28px */
+        --font-size-3xl: 1.5rem;   /* 24px */
+        --font-size-2xl: 1.25rem;  /* 20px */
+        --spacing-2xl: 2rem;       /* 32px */
+        --spacing-3xl: 2.5rem;     /* 40px */
+    }
+    
+    /* 移动端侧边栏样式 */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: var(--z-sidebar);
+        background-color: var(--background-color);
+        box-shadow: var(--shadow-xl);
+        width: min(320px, 80vw);
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    /* 移动端不给main-content添加左边距 */
+    .sidebar.open ~ .main-content {
+        margin-left: 0;
+    }
+    
+    /* 移动端sidebar内容优化 */
+    .sidebar-functions,
+    .sidebar-navigation,
+    .sidebar-zoom {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+    
+    .sidebar-function-btn {
+        padding: var(--spacing-sm);
+        font-size: var(--font-size-sm);
+    }
+    
+    .zoom-controls {
+        padding: var(--spacing-xs);
+    }
+    
+    .zoom-btn {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .sidebar-header {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .slide-navigation {
+        max-height: none;
+        flex: 1;
+    }
+    
+    /* 调整控制栏 */
+    .control-bar {
+        padding: 0 var(--spacing-md);
+        height: var(--control-bar-height);
+    }
+    
+    .control-center h2 {
+        font-size: var(--font-size-base);
+    }
+    
+    .control-btn {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .control-left,
+    .control-right {
+        gap: var(--spacing-xs);
+        max-width: 38%;
+        overflow: hidden;
+    }
+    
+    .slide-counter {
+        display: none; /* 在手机上隐藏计数器 */
+    }
+    
+    /* 调整幻灯片布局 */
+    .slide {
+        padding: var(--spacing-lg);
+    }
+    
+    .slide-content {
+        max-width: none;
+    }
+    
+    /* 封面布局调整 */
+    .cover-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .cover-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .cover-features {
+        gap: var(--spacing-md);
+    }
+    
+    .feature-item {
+        flex-direction: row;
+        gap: var(--spacing-md);
+    }
+    
+    .feature-item i {
+        font-size: var(--font-size-xl);
+    }
+    
+    /* 功能卡片单列显示 */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .feature-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .feature-card i {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* 教程步骤调整 */
+    .step {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    /* AI 提示词调整 */
+    .prompt-box {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-md);
+    }
+    
+    /* 主题展示调整 */
+    .theme-showcase {
+        gap: var(--spacing-md);
+    }
+    
+    .theme-preview {
+        min-width: auto;
+        padding: var(--spacing-md);
+    }
+    
+    /* 行动卡片调整 */
+    .start-actions {
+        gap: var(--spacing-md);
+    }
+    
+    .action-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .action-card i {
+        font-size: var(--font-size-2xl);
+    }
+    
+    /* 显示移动端导航 */
+    .mobile-nav {
+        display: flex;
+    }
+    
+    .main-content {
+        padding-bottom: var(--mobile-nav-height);
+    }
+    
+    /* 模态框调整 */
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .modal-header,
+    .modal-body {
+        padding: var(--spacing-md);
+    }
+    
+    /* 欢迎遮罩调整 */
+    .welcome-content {
+        margin: var(--spacing-md);
+        padding: var(--spacing-xl);
+        max-width: none;
+    }
+    
+    .welcome-buttons {
+        flex-direction: column;
+    }
+    
+    /* 进度条在移动端更粗 */
+    .progress-bar {
+        height: 6px;
+    }
+    
+    /* 浮动sidebar打开按钮 */
+    .sidebar-open-btn {
+        top: var(--spacing-md);
+        left: var(--spacing-md);
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-md);
+    }
+    
+    /* 计数器覆盖层 */
+    .slide-counter-overlay {
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+    
+    .slide-counter-badge {
+        font-size: 12px;
+        padding: 4px 8px;
+        min-width: 50px;
+    }
+    
+    /* 主内容区域padding调整 */
+    .main-content {
+        padding: var(--spacing-xs);
+    }
+    
+    .slide-container {
+        padding: var(--spacing-xs);
+        min-height: calc(100vh - 100px);
+    }
+    
+    .slide-viewport {
+        max-height: calc(100vh - 150px);
+    }
+    
+    /* ===== 移动端sidebar底部控制区域 ===== */
+    .sidebar-slide-controls {
+        padding: var(--spacing-sm);
+    }
+    
+    .slide-navigation-controls {
+        padding: 0;
+        gap: var(--spacing-sm);
+    }
+    
+    .nav-control-btn {
+        width: 32px;
+        height: 32px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .slide-counter {
+        font-size: var(--font-size-xs);
+        min-width: 45px;
+    }
+    
+    /* ===== 移动端缩放控制区域 ===== */
+    .zoom-controls {
+        gap: var(--spacing-xs);
+        padding: 0;
+    }
+    
+    .zoom-btn {
+        width: 24px;
+        height: 24px;
+        font-size: var(--font-size-xs);
+    }
+    
+    .zoom-display {
+        font-size: var(--font-size-xs);
+        min-width: 40px;
+    }
+}
+
+/* ===== 小屏手机适配 (<480px) ===== */
+@media (max-width: 480px) {
+    :root {
+        --font-size-5xl: 1.75rem;  /* 28px */
+        --font-size-4xl: 1.5rem;   /* 24px */
+        --font-size-3xl: 1.25rem;  /* 20px */
+        --spacing-xl: 1.25rem;     /* 20px */
+        --spacing-2xl: 1.5rem;     /* 24px */
+        --spacing-3xl: 2rem;       /* 32px */
+    }
+    
+    .slide {
+        padding: var(--spacing-md);
+    }
+    
+    .cover-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .cover-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .feature-card {
+        padding: var(--spacing-md);
+    }
+    
+    .action-card {
+        padding: var(--spacing-md);
+    }
+    
+    .control-bar {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .control-center h2 {
+        font-size: var(--font-size-sm);
+    }
+    
+    .control-left,
+    .control-right {
+        max-width: 45%;
+        flex-wrap: wrap;
+    }
+    
+    .control-btn {
+        width: 26px;
+        height: 26px;
+        padding: 2px;
+        font-size: 11px;
+    }
+    
+    .control-center {
+        flex: 0 1 auto;
+        min-width: 100px;
+    }
+    
+    .control-center h2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* 浮动sidebar打开按钮 */
+    .sidebar-open-btn {
+        top: var(--spacing-sm);
+        left: var(--spacing-sm);
+        width: 36px;
+        height: 36px;
+        font-size: var(--font-size-sm);
+    }
+    
+    /* 计数器覆盖层 */
+    .slide-counter-overlay {
+        bottom: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+    
+    .slide-counter-badge {
+        font-size: 11px;
+        padding: 2px 6px;
+        min-width: 45px;
+    }
+    
+    /* 主内容区域 */
+    .slide-container {
+        padding: 2px;
+        min-height: calc(100vh - 80px);
+    }
+    
+    .slide-viewport {
+        max-height: calc(100vh - 120px);
+    }
+    
+    /* ===== 移动端sidebar底部控制区域 ===== */
+    .sidebar-slide-controls {
+        padding: var(--spacing-xs);
+    }
+    
+    .slide-navigation-controls {
+        padding: 0;
+        gap: var(--spacing-xs);
+    }
+    
+    .nav-control-btn {
+        width: 28px;
+        height: 28px;
+        font-size: var(--font-size-xs);
+    }
+    
+    .slide-counter {
+        font-size: var(--font-size-xs);
+        min-width: 40px;
+    }
+    
+    /* ===== 小屏幕缩放控制区域 ===== */
+    .zoom-controls {
+        gap: 2px;
+        padding: 0;
+    }
+    
+    .zoom-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+    
+    .zoom-display {
+        font-size: 10px;
+        min-width: 35px;
+    }
+}
+
+/* ===== 横屏模式适配 ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .slide {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .cover-features {
+        flex-direction: row;
+        gap: var(--spacing-lg);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .theme-showcase {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .start-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* ===== 触摸设备优化 ===== */
+@media (hover: none) and (pointer: coarse) {
+    /* 增大可触摸区域 */
+    .control-btn,
+    .mobile-nav-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .nav-item {
+        min-height: 48px;
+    }
+    
+    .theme-btn,
+    .action-btn {
+        min-height: 44px;
+    }
+    
+    /* 移除 hover 效果 */
+    .feature-card:hover,
+    .action-card:hover,
+    .theme-preview:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    /* 增强点击反馈 */
+    .control-btn:active,
+    .mobile-nav-btn:active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+    
+    .nav-item:active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+}
+
+/* ===== 高分辨率屏幕优化 ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* 确保在高分辨率屏幕上的清晰度 */
+    .slide-number,
+    .control-btn {
+        border: 0.5px solid var(--border-color);
+    }
+    
+    .progress-bar {
+        border-top: 0.5px solid var(--border-color);
+    }
+}
+
+/* ===== 暗色模式支持 ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --surface-color: #2d2d2d;
+        --text-primary: #ffffff;
+        --text-secondary: #a0a0a0;
+        --text-muted: #666666;
+        --border-color: #404040;
+        --shadow-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .welcome-overlay {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .modal {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .prompt-box {
+        background-color: #1e1e1e;
+        border-color: #404040;
+        color: #a0a0a0;
+    }
+    
+    kbd {
+        background-color: #404040;
+        border-color: #666666;
+        color: #ffffff;
+    }
+}
+
+/* ===== 减少动画偏好 ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .slide {
+        transition: none;
+    }
+    
+    .sidebar {
+        transition: none;
+    }
+}
+
+/* ===== 高对比度模式 ===== */
+@media (prefers-contrast: high) {
+    :root {
+        --border-color: #000000;
+        --shadow-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .feature-card,
+    .action-card,
+    .theme-preview {
+        border-width: 2px;
+    }
+    
+    .btn-primary,
+    .theme-btn,
+    .action-btn {
+        border: 2px solid var(--primary-color);
+    }
+    
+    .btn-secondary {
+        border-width: 2px;
+    }
+}
+
+/* ===== 打印样式 ===== */
+@media print {
+    .sidebar,
+    .control-bar,
+    .progress-bar,
+    .mobile-nav,
+    .welcome-overlay,
+    .modal {
+        display: none !important;
+    }
+    
+    .main-content {
+        width: 100%;
+        height: auto;
+    }
+    
+    .slide {
+        position: static;
+        opacity: 1;
+        transform: none;
+        page-break-inside: avoid;
+        page-break-after: always;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        display: flex;
+        padding: 2cm;
+    }
+    
+    .slide:last-child {
+        page-break-after: auto;
+    }
+    
+    .slide-content {
+        max-width: none;
+    }
+    
+    /* 打印时的颜色调整 */
+    * {
+        color: #000000 !important;
+        background: #ffffff !important;
+    }
+    
+    .cover-title {
+        background: none !important;
+        -webkit-text-fill-color: initial !important;
+        color: #000000 !important;
+    }
+    
+    .feature-card,
+    .action-card,
+    .theme-preview {
+        border: 1px solid #000000 !important;
+        box-shadow: none !important;
+    }
+}
+
+/* ===== 处理sidebar状态切换 ===== */
+@media (min-width: 769px) {
+    /* 桌面端：sidebar展开时为main-content添加左边距 */
+    .sidebar.open ~ .main-content {
+        margin-left: var(--sidebar-width);
+        transition: margin-left var(--duration-normal) ease;
+    }
+    
+    /* 桌面端：sidebar关闭时移除左边距 */
+    .sidebar:not(.open) ~ .main-content {
+        margin-left: 0;
+        transition: margin-left var(--duration-normal) ease;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 移动端：sidebar使用覆盖模式，不压缩main-content */
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    /* 移动端：sidebar展开时添加背景遮罩 */
+    .sidebar.open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: calc(var(--z-sidebar) - 1);
+    }
+} 

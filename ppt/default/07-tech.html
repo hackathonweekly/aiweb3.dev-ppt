@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术特色</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            padding: 60px 80px;
+            overflow: hidden;
+            position: relative;
+        }
+        .tech-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        .tech-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        .highlight-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .header-gradient {
+            background: linear-gradient(45deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .code-snippet {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            overflow-x: auto;
+            margin-top: 12px;
+        }
+        .architecture-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+        .architecture-item:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 标题部分 -->
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-bold header-gradient mb-4">
+                🛠️ 技术特色
+            </h1>
+            <p class="text-xl text-gray-700 font-light">
+                现代化架构，专业级功能
+            </p>
+        </div>
+        
+        <!-- 核心技术特色 -->
+        <div class="feature-grid">
+            <!-- 零依赖架构 -->
+            <div class="tech-card rounded-xl p-6 text-center">
+                <div class="tech-icon text-3xl mb-4">
+                    <i class="fas fa-feather-alt"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">零依赖架构</h3>
+                <p class="text-sm text-gray-600 mb-4">纯HTML/CSS/JS实现，无需任何框架和构建工具</p>
+                <div class="flex justify-center space-x-2">
+                    <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs">HTML5</span>
+                    <span class="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">CSS3</span>
+                    <span class="px-2 py-1 bg-yellow-100 text-yellow-700 rounded text-xs">ES6</span>
+                </div>
+            </div>
+            
+            <!-- 模块化系统 -->
+            <div class="tech-card rounded-xl p-6 text-center">
+                <div class="tech-icon text-3xl mb-4">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">模块化系统</h3>
+                <p class="text-sm text-gray-600 mb-4">每个功能独立模块，易于维护和扩展</p>
+                <div class="flex justify-center space-x-2">
+                    <span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs">组件化</span>
+                    <span class="px-2 py-1 bg-indigo-100 text-indigo-700 rounded text-xs">可扩展</span>
+                </div>
+            </div>
+            
+            <!-- 智能配置 -->
+            <div class="tech-card rounded-xl p-6 text-center">
+                <div class="tech-icon text-3xl mb-4">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">智能配置</h3>
+                <p class="text-sm text-gray-600 mb-4">自动检测文件夹，动态生成配置</p>
+                <div class="flex justify-center space-x-2">
+                    <span class="px-2 py-1 bg-teal-100 text-teal-700 rounded text-xs">自动化</span>
+                    <span class="px-2 py-1 bg-cyan-100 text-cyan-700 rounded text-xs">动态</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部两栏布局 -->
+        <div class="grid grid-cols-2 gap-8">
+            <!-- 左侧：高级功能 -->
+            <div class="highlight-section rounded-xl p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-rocket tech-icon mr-3"></i>
+                    高级功能
+                </h3>
+                
+                <div class="space-y-3">
+                    <div class="architecture-item">
+                        <i class="fas fa-clock text-orange-500 mr-3"></i>
+                        <div>
+                            <div class="font-medium text-sm">演示计时器</div>
+                            <div class="text-xs text-gray-500">专业时间管理工具</div>
+                        </div>
+                    </div>
+                    
+                    <div class="architecture-item">
+                        <i class="fas fa-th-large text-blue-500 mr-3"></i>
+                        <div>
+                            <div class="font-medium text-sm">幻灯片概览</div>
+                            <div class="text-xs text-gray-500">缩略图导航和拖拽排序</div>
+                        </div>
+                    </div>
+                    
+                    <div class="architecture-item">
+                        <i class="fas fa-search text-green-500 mr-3"></i>
+                        <div>
+                            <div class="font-medium text-sm">搜索功能</div>
+                            <div class="text-xs text-gray-500">快速内容搜索定位</div>
+                        </div>
+                    </div>
+                    
+                    <div class="architecture-item">
+                        <i class="fas fa-file-pdf text-red-500 mr-3"></i>
+                        <div>
+                            <div class="font-medium text-sm">PDF导出</div>
+                            <div class="text-xs text-gray-500">高质量文档输出</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧：项目结构 -->
+            <div class="highlight-section rounded-xl p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-folder-tree tech-icon mr-3"></i>
+                    项目结构
+                </h3>
+                
+                <div class="code-snippet">
+                    <div class="text-green-400 mb-2">// 清晰的目录结构</div>
+                    <div class="text-yellow-300">ppt-html-template/</div>
+                    <div class="text-blue-300">├── index.html        <span class="text-gray-400"># 主文件</span></div>
+                    <div class="text-blue-300">├── config.js         <span class="text-gray-400"># 配置</span></div>
+                    <div class="text-blue-300">├── ppt/              <span class="text-gray-400"># PPT文件夹</span></div>
+                    <div class="text-blue-300">│   ├── project-1/    <span class="text-gray-400"># 项目1</span></div>
+                    <div class="text-blue-300">│   └── project-2/    <span class="text-gray-400"># 项目2</span></div>
+                    <div class="text-blue-300">├── assets/           <span class="text-gray-400"># 资源文件</span></div>
+                    <div class="text-blue-300">│   ├── css/          <span class="text-gray-400"># 样式</span></div>
+                    <div class="text-blue-300">│   ├── js/           <span class="text-gray-400"># 脚本</span></div>
+                    <div class="text-blue-300">│   └── images/       <span class="text-gray-400"># 图片</span></div>
+                    <div class="text-blue-300">└── README.md         <span class="text-gray-400"># 说明文档</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部技术栈 -->
+        <div class="text-center mt-8">
+            <div class="inline-flex items-center px-8 py-4 bg-white bg-opacity-90 rounded-full shadow-lg">
+                <i class="fas fa-code text-blue-500 mr-3"></i>
+                <span class="text-gray-700 font-medium">基于现代Web技术栈，兼容所有主流浏览器</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

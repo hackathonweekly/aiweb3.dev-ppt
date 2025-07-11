@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neobrutalism PPT - 感谢</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../../assets/vendor/fontawesome/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+        }
+        .neo-shadow {
+            box-shadow: 8px 8px 0px #000000;
+        }
+        .neo-border {
+            border: 4px solid #000000;
+        }
+        .explosive {
+            animation: explosive 4s infinite;
+        }
+        @keyframes explosive {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.1) rotate(2deg); }
+            50% { transform: scale(1.05) rotate(-2deg); }
+            75% { transform: scale(1.15) rotate(1deg); }
+        }
+        .bounce-crazy {
+            animation: bounceCrazy 2s infinite;
+        }
+        @keyframes bounceCrazy {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Neobrutalism 感谢页 -->
+<div class="min-h-screen bg-pink-400 relative overflow-hidden">
+    <!-- 爆炸性背景元素 -->
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-8 left-8 w-32 h-32 bg-red-500 neo-border neo-shadow rotate-45 explosive"></div>
+        <div class="absolute top-12 right-12 w-24 h-24 bg-blue-500 neo-border neo-shadow -rotate-12 explosive"></div>
+        <div class="absolute bottom-12 left-12 w-28 h-28 bg-green-500 neo-border neo-shadow rotate-12 explosive"></div>
+        <div class="absolute bottom-8 right-8 w-36 h-36 bg-yellow-400 neo-border neo-shadow -rotate-45 explosive"></div>
+        
+        <!-- 中间装饰 -->
+        <div class="absolute top-1/2 left-1/4 w-20 h-20 bg-purple-500 neo-border rotate-45 explosive"></div>
+        <div class="absolute top-1/3 right-1/4 w-16 h-16 bg-orange-500 neo-border -rotate-45 explosive"></div>
+    </div>
+    
+    <!-- 主要内容 -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center p-8">
+        <!-- 主标题 -->
+        <div class="text-center mb-16">
+            <h1 class="text-9xl font-black text-black mb-8 leading-none explosive">
+                THANK
+                <br>
+                <span class="text-red-500 bounce-crazy inline-block">YOU!</span>
+            </h1>
+            
+            <div class="bg-black text-pink-400 px-12 py-6 neo-border neo-shadow -rotate-3 mb-8">
+                <h2 class="text-4xl font-bold uppercase tracking-wider">
+                    感谢观看
+                </h2>
+            </div>
+        </div>
+        
+        <!-- 联系信息卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl w-full">
+            <!-- Email -->
+            <div class="bg-red-500 text-white p-6 neo-border neo-shadow rotate-3 text-center bounce-crazy">
+                <i class="fas fa-envelope text-4xl mb-4"></i>
+                <h3 class="text-xl font-black uppercase mb-2">Email</h3>
+                <p class="font-bold">contact@brutal.com</p>
+            </div>
+            
+            <!-- Website -->
+            <div class="bg-blue-500 text-white p-6 neo-border neo-shadow -rotate-3 text-center bounce-crazy">
+                <i class="fas fa-globe text-4xl mb-4"></i>
+                <h3 class="text-xl font-black uppercase mb-2">Website</h3>
+                <p class="font-bold">www.brutal-design.com</p>
+            </div>
+            
+            <!-- Social -->
+            <div class="bg-green-500 text-white p-6 neo-border neo-shadow rotate-3 text-center bounce-crazy">
+                <i class="fas fa-hashtag text-4xl mb-4"></i>
+                <h3 class="text-xl font-black uppercase mb-2">Social</h3>
+                <p class="font-bold">@brutal_design</p>
+            </div>
+        </div>
+        
+        <!-- 二维码区域 -->
+        <div class="mt-16 bg-white p-8 neo-border neo-shadow rotate-2">
+            <div class="w-32 h-32 bg-black flex items-center justify-center">
+                <i class="fas fa-qrcode text-white text-6xl"></i>
+            </div>
+        </div>
+        
+        <!-- 底部标语 -->
+        <div class="mt-12">
+            <div class="bg-yellow-400 text-black px-8 py-4 neo-border neo-shadow -rotate-2">
+                <p class="text-2xl font-black uppercase text-center">
+                    🔥 KEEP BEING BRUTAL! 🔥
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 装饰性文字 -->
+    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 -rotate-90 opacity-20">
+        <p class="text-black font-black text-2xl uppercase tracking-widest">
+            STAY WILD
+        </p>
+    </div>
+    
+    <div class="absolute top-1/2 right-4 transform -translate-y-1/2 rotate-90 opacity-20">
+        <p class="text-black font-black text-2xl uppercase tracking-widest">
+            BE BOLD
+        </p>
+    </div>
+    
+    <!-- 顶部装饰 -->
+    <div class="absolute top-8 left-1/2 transform -translate-x-1/2 opacity-30">
+        <p class="text-black font-black text-6xl uppercase rotate-12">BRUTAL</p>
+    </div>
+</div>
+
+</body>
+</html> 

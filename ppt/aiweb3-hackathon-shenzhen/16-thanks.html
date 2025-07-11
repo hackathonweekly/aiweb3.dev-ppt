@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感谢 - AI³ 深圳站迷你黑客松</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .slide {
+            height: 100vh !important;
+            width: 100vw !important;
+            overflow: hidden !important;
+        }
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+        .slide-content {
+            height: 100% !important;
+            width: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: center !important;
+            padding: 2rem !important;
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .countdown {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 text-white">
+        <div class="slide-content">
+            <!-- Main Thank You Section -->
+            <div class="text-center mb-12">
+                <div class="floating mb-8">
+                    <i class="fas fa-heart text-red-400 text-8xl mb-6"></i>
+                </div>
+                
+                <h1 class="text-7xl font-black mb-6">
+                    <span class="bg-white text-black px-6 py-2 inline-block transform rotate-2 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">谢谢大家！</span>
+                </h1>
+                
+                <p class="text-3xl mb-8 font-bold">感谢参与 AI³ 深圳站迷你黑客松</p>
+                
+                <div class="bg-white text-black p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 mb-8 max-w-2xl">
+                    <h2 class="text-2xl font-bold mb-4">期待下次相见</h2>
+                    <p class="text-lg mb-4">继续关注我们的活动，一起探索AI+Web3的无限可能！</p>
+                    
+                    <!-- QR Codes -->
+                    <div class="flex justify-center gap-8 mt-6">
+                        <div class="text-center">
+                            <div class="bg-white p-2 border-2 border-black mb-2">
+                                <img src="../../public/images/HackathonWeekly/wechat_official_qr.jpg" alt="周周黑客松" class="w-24 h-24">
+                            </div>
+                            <p class="text-sm font-bold">周周黑客松</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-white p-2 border-2 border-black mb-2">
+                                <img src="../../public/images/openbuild/openbuild-wechat-qr.jpg" alt="OpenBuild" class="w-24 h-24">
+                            </div>
+                            <p class="text-sm font-bold">OpenBuild</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="bg-black text-white p-6 border-4 border-yellow-400 shadow-[5px_5px_0px_0px_rgba(255,193,7,1)] transform rotate-1 mb-8">
+                <p class="text-center text-xl mb-2">页面将在 <span id="countdown" class="countdown">10</span> 秒后自动跳转到首页</p>
+                <div class="text-center">
+                    <button onclick="goHome()" class="bg-yellow-400 text-black px-6 py-2 border-2 border-black font-bold hover:bg-yellow-300 transition-colors">
+                        立即返回首页
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Bottom Message -->
+            <div class="text-center">
+                <p class="text-xl font-bold pulse">🚀 让我们一起用AI改变Web3的未来！</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let countdown = 10;
+        const countdownElement = document.getElementById('countdown');
+        
+        function updateCountdown() {
+            countdownElement.textContent = countdown;
+            countdown--;
+            
+            if (countdown < 0) {
+                goHome();
+            }
+        }
+        
+        function goHome() {
+            // 跳转到首页或者指定页面
+            window.location.href = '../../index.html';
+        }
+        
+        // 每秒更新倒计时
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

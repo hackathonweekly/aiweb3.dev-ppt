@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感谢观看</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .main-content {
+            text-center;
+            z-index: 10;
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .thank-you-text {
+            background: linear-gradient(45deg, #ffffff, #f8fafc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cta-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            display: inline-block;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 24px;
+        }
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-highlight {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .feature-highlight i {
+            color: #667eea;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 主要内容 -->
+        <div class="main-content">
+            <!-- 感谢标题 -->
+            <div class="mb-8">
+                <h1 class="text-7xl font-bold thank-you-text mb-4">
+                    感谢观看！
+                </h1>
+                <p class="text-2xl text-white text-opacity-90 font-light">
+                    开始你的 HTML PPT 创作之旅
+                </p>
+            </div>
+            
+            <!-- 核心价值回顾 -->
+            <div class="contact-card max-w-2xl mx-auto">
+                <div class="grid grid-cols-2 gap-8 mb-8">
+                    <div class="text-left">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">✨ 核心优势</h3>
+                        <div class="space-y-3">
+                            <div class="feature-highlight">
+                                <i class="fas fa-robot"></i>
+                                <span class="text-sm text-gray-600">AI 驱动，智能生成</span>
+                            </div>
+                            <div class="feature-highlight">
+                                <i class="fas fa-rocket"></i>
+                                <span class="text-sm text-gray-600">开箱即用，零配置</span>
+                            </div>
+                            <div class="feature-highlight">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span class="text-sm text-gray-600">响应式设计，全平台</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-left">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">🎯 立即行动</h3>
+                        <div class="space-y-3">
+                            <div class="feature-highlight">
+                                <i class="fas fa-download"></i>
+                                <span class="text-sm text-gray-600">双击 index.html 开始</span>
+                            </div>
+                            <div class="feature-highlight">
+                                <i class="fas fa-magic"></i>
+                                <span class="text-sm text-gray-600">用 AI 生成专业 PPT</span>
+                            </div>
+                            <div class="feature-highlight">
+                                <i class="fas fa-share-alt"></i>
+                                <span class="text-sm text-gray-600">分享你的创作成果</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 行动号召 -->
+                <div class="text-center">
+                    <a href="#" class="cta-button">
+                        <i class="fas fa-play mr-2"></i>
+                        立即开始创作
+                    </a>
+                </div>
+                
+                <!-- 推荐AI编辑器 -->
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-4">推荐 AI 编辑器</h4>
+                    <div class="social-links">
+                        <a href="https://cursor.sh/" class="social-link" title="Cursor">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="https://trae.ai/" class="social-link" title="Trae">
+                            <i class="fas fa-brain"></i>
+                        </a>
+                        <a href="https://windsurf.ai/" class="social-link" title="Windsurf">
+                            <i class="fas fa-wind"></i>
+                        </a>
+                        <a href="https://github.com/" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 底部信息 -->
+            <div class="mt-8 text-center">
+                <p class="text-white text-opacity-70 text-sm">
+                    专为 AI 编辑器设计 · 让创建演示文稿变得简单而高效
+                </p>
+                <p class="text-white text-opacity-60 text-xs mt-2">
+                    MIT License · 自由使用、修改和分发
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

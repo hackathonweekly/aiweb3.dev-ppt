@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal PPT - 感谢</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .line {
+            width: 100px;
+            height: 1px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+        .contact-item {
+            transition: all 0.3s ease;
+        }
+        .contact-item:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<!-- 极简感谢页 -->
+<div class="min-h-screen bg-white flex items-center justify-center">
+    <div class="text-center max-w-4xl px-8 fade-in">
+        <!-- 主标题 -->
+        <h1 class="text-8xl font-light text-black mb-8 leading-tight tracking-wide">
+            谢谢
+        </h1>
+        
+        <!-- 分割线 -->
+        <div class="line mb-12"></div>
+        
+        <!-- 感谢信息 -->
+        <p class="text-2xl font-light text-gray-700 mb-16 tracking-wide">
+            感谢您的时间与关注
+        </p>
+        
+        <!-- 联系方式 -->
+        <div class="space-y-8 mb-16">
+            <div class="contact-item">
+                <p class="text-lg font-light text-gray-600">
+                    邮箱：hello@minimal.com
+                </p>
+            </div>
+            
+            <div class="contact-item">
+                <p class="text-lg font-light text-gray-600">
+                    网站：www.minimal-design.com
+                </p>
+            </div>
+            
+            <div class="contact-item">
+                <p class="text-lg font-light text-gray-600">
+                    微信：@minimal_design
+                </p>
+            </div>
+        </div>
+        
+        <!-- 二维码占位符 -->
+        <div class="mb-16">
+            <div class="w-32 h-32 mx-auto border border-gray-300 flex items-center justify-center">
+                <span class="text-gray-400 text-sm">QR CODE</span>
+            </div>
+        </div>
+        
+        <!-- 底部标识 -->
+        <div class="text-sm font-light text-gray-400 tracking-widest uppercase">
+            MINIMAL PRESENTATION TEMPLATE
+        </div>
+    </div>
+</div>
+
+</body>
+</html> 

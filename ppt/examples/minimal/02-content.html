@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal PPT - 设计原则</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .minimal-border {
+            border-left: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 极简内容页 -->
+<div class="min-h-screen bg-white flex items-center">
+    <div class="w-full max-w-6xl mx-auto px-16">
+        <!-- 页面标题 -->
+        <div class="mb-20 fade-in">
+            <h1 class="text-6xl font-light text-black mb-4 tracking-wide">
+                设计原则
+            </h1>
+            <div class="w-20 h-px bg-black"></div>
+        </div>
+        
+        <!-- 内容网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <!-- 左列 -->
+            <div class="space-y-16 slide-in">
+                <!-- 原则1 -->
+                <div class="minimal-border pl-8">
+                    <h2 class="text-4xl font-light text-black mb-6">简约</h2>
+                    <p class="text-xl font-light text-gray-700 leading-relaxed">
+                        去除一切不必要的元素<br>
+                        保留最核心的信息<br>
+                        让内容自然呼吸
+                    </p>
+                </div>
+                
+                <!-- 原则2 -->
+                <div class="minimal-border pl-8">
+                    <h2 class="text-4xl font-light text-black mb-6">专注</h2>
+                    <p class="text-xl font-light text-gray-700 leading-relaxed">
+                        一次只传达一个主题<br>
+                        避免信息过载<br>
+                        引导视线聚焦
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 右列 -->
+            <div class="space-y-16 slide-in" style="animation-delay: 0.3s;">
+                <!-- 原则3 -->
+                <div class="minimal-border pl-8">
+                    <h2 class="text-4xl font-light text-black mb-6">平衡</h2>
+                    <p class="text-xl font-light text-gray-700 leading-relaxed">
+                        合理运用留白空间<br>
+                        创造视觉层次感<br>
+                        追求和谐统一
+                    </p>
+                </div>
+                
+                <!-- 原则4 -->
+                <div class="minimal-border pl-8">
+                    <h2 class="text-4xl font-light text-black mb-6">功能</h2>
+                    <p class="text-xl font-light text-gray-700 leading-relaxed">
+                        形式服务于内容<br>
+                        优先考虑可读性<br>
+                        设计为目标服务
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部引言 -->
+        <div class="mt-20 text-center fade-in" style="animation-delay: 0.6s;">
+            <p class="text-2xl font-light text-gray-500 italic tracking-wide">
+                "简约是复杂的最终形式"
+            </p>
+            <p class="text-lg font-light text-gray-400 mt-4">
+                — Leonardo da Vinci
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html> 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML PPT 模板介绍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glow {
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #ffffff, #f0f8ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 主要内容 -->
+        <div class="text-center z-10">
+            <!-- 图标 -->
+            <div class="mb-8">
+                <div class="inline-block p-6 bg-white bg-opacity-20 rounded-3xl glow">
+                    <i class="fas fa-file-powerpoint text-6xl text-white"></i>
+                </div>
+            </div>
+            
+            <!-- 标题 -->
+            <h1 class="text-6xl font-bold text-white mb-4 text-gradient">
+                HTML PPT 模板
+            </h1>
+            
+            <!-- 副标题 -->
+            <p class="text-2xl text-white text-opacity-90 mb-8 font-light">
+                专为AI编辑器设计的零依赖演示解决方案
+            </p>
+            
+            <!-- 特色标签 -->
+            <div class="flex justify-center space-x-4 mb-12">
+                <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-white text-sm font-medium">
+                    <i class="fas fa-robot mr-2"></i>AI 驱动
+                </span>
+                <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-white text-sm font-medium">
+                    <i class="fas fa-rocket mr-2"></i>开箱即用
+                </span>
+                <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-white text-sm font-medium">
+                    <i class="fas fa-mobile-alt mr-2"></i>响应式设计
+                </span>
+            </div>
+            
+            <!-- 日期和作者 -->
+            <div class="text-white text-opacity-60 text-lg">
+                <p class="mb-2">现代化演示文稿解决方案</p>
+                <p class="font-light">2024 年度产品介绍</p>
+            </div>
+        </div>
+        
+        <!-- 底部装饰 -->
+        <div class="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-transparent via-white to-transparent opacity-30"></div>
+    </div>
+</body>
+</html> 

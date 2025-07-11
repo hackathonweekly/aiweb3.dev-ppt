@@ -3,81 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI³ 深圳站迷你黑客松</title>
-    <!-- Favicon -->
-    <link rel="icon" href="public/icon.svg" type="image/svg+xml">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <title>HTML PPT 模板 - 使用教程</title>
+    <meta name="description" content="一个纯HTML的PPT演示模板，支持AI生成内容，响应式设计">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/editor.css">
+    
+    <!-- 字体和图标 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome 本地 -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
 </head>
-<body class="bg-black text-white">
-    <div class="presentation-container">
-        <!-- Left Navigation Menu -->
-        <div id="sidebar" class="sidebar">
-            <div class="sidebar-header">
-                <h3 class="text-xl font-bold p-4">幻灯片导航</h3>
-                <button id="closeSidebar" class="close-btn">
-                    <i class="fas fa-times"></i>
+<body>
+    <!-- 欢迎提示 -->
+    <div id="welcome-overlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <h1>🎉 欢迎使用 HTML PPT 模板</h1>
+            <p>这是一个纯HTML的PPT演示模板，无需安装任何软件即可使用</p>
+            <div class="welcome-buttons">
+                <button class="btn-primary" onclick="startTutorial()">
+                    <i class="fas fa-play"></i> 开始教程
                 </button>
-            </div>
-            <ul class="sidebar-menu">
-                <li data-slide="1" class="active">封面页</li>
-                <li data-slide="2">活动介绍</li>
-                <li data-slide="3">活动主题</li>
-                <li data-slide="4">活动详情</li>
-                <li data-slide="5">活动流程</li>
-                <li data-slide="6">参与人群</li>
-                <li data-slide="7">参与收获</li>
-                <li data-slide="8">组队指南</li>
-                <li data-slide="9">技术导师介绍</li>
-                <li data-slide="10">奖项设置</li>
-                <li data-slide="11">代码提交</li>
-                <li data-slide="12">合作伙伴</li>
-                <li data-slide="13">联系我们</li>
-                <li data-slide="14">颁奖典礼</li>
-                <li data-slide="14a">一等奖</li>
-                <li data-slide="14b">二等奖</li>
-                <li data-slide="14c">三等奖</li>
-                <li data-slide="14d">参与奖</li>
-                <li data-slide="15">感谢参与</li>
-            </ul>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Top Controls -->
-            <div class="controls">
-                <button id="openSidebar" class="control-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <button id="fullscreenBtn" class="control-btn">
-                    <i class="fas fa-expand"></i>
-                </button>
-            </div>
-            
-            <!-- Slide Container (iframe) -->
-            <div class="slide-container">
-                <iframe id="slideFrame" src="slides/slide1.html" frameborder="0" scrolling="yes"></iframe>
-            </div>
-            
-            <!-- Bottom Navigation Controls -->
-            <div class="bottom-controls">
-                <button id="prevBtn" class="nav-btn">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <div id="slideIndicator" class="slide-indicator">1 / 19</div>
-                <button id="nextBtn" class="nav-btn">
-                    <i class="fas fa-chevron-right"></i>
+                <button class="btn-secondary" onclick="closeWelcome()">
+                    <i class="fas fa-times"></i> 直接使用
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Custom JavaScript -->
-    <script src="js/script.js"></script>
-    <script src="js/insert-script-in-slides.js"></script>
+    <!-- 主要内容区域 -->
+    <div class="ppt-container">
+        <!-- 侧边栏导航 -->
+        <nav class="sidebar open" id="sidebar">
+            <div class="sidebar-header">
+                <h3>PPT 控制面板</h3>
+                <button class="sidebar-toggle" onclick="toggleSidebar()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+
+            
+            <!-- 功能按钮区域 -->
+            <div class="sidebar-functions">
+                <div class="sidebar-section-header" onclick="toggleSidebarSection('functions')">
+                    <h4>功能面板</h4>
+                    <i class="fas fa-chevron-down sidebar-section-arrow"></i>
+                </div>
+                <div class="sidebar-section-content" id="functions-section">
+                    <div class="function-buttons">
+                        <button class="sidebar-function-btn" onclick="showFolderSelector()" title="选择PPT文件夹">
+                            <i class="fas fa-folder-open"></i>
+                            <span>切换项目</span>
+                        </button>
+                        <button class="sidebar-function-btn" onclick="showHelp()" title="帮助中心">
+                            <i class="fas fa-question-circle"></i>
+                            <span>帮助中心</span>
+                        </button>
+                        <button class="sidebar-function-btn" onclick="showPresentationTimer()" title="演示计时器 (Alt+T)">
+                            <i class="fas fa-clock"></i>
+                            <span>计时器</span>
+                        </button>
+                        <button class="sidebar-function-btn" onclick="toggleFullscreen()" title="全屏 (F11)">
+                            <i class="fas fa-expand"></i>
+                            <span>全屏</span>
+                        </button>
+                        <button class="sidebar-function-btn" onclick="exportToPDF()" title="导出PDF">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>导出PDF</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 幻灯片导航区域 -->
+            <div class="sidebar-navigation">
+                <h4>幻灯片导航</h4>
+                <div class="sidebar-controls">
+                    <button class="sidebar-control-btn custom-tooltip" onclick="resetSlideOrder()" data-tooltip="恢复默认顺序">
+                        <i class="fas fa-undo"></i>
+                        <span>重置顺序</span>
+                    </button>
+                </div>
+                <div class="slide-navigation" id="slide-navigation">
+                    <!-- 导航项将由JavaScript动态生成 -->
+                </div>
+            </div>
+            
+            <!-- 缩放控制区域 -->
+            <div class="sidebar-zoom">
+                <div class="zoom-controls">
+                    <button id="sidebar-zoom-out" class="zoom-btn" title="缩小">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <span id="sidebar-zoom-display" class="zoom-display">100%</span>
+                    <button id="sidebar-zoom-in" class="zoom-btn" title="放大">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button id="sidebar-zoom-reset" class="zoom-btn" title="重置缩放">
+                        <i class="fas fa-home"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 底部幻灯片控制区域 -->
+            <div class="sidebar-slide-controls">
+                <div class="slide-navigation-controls">
+                    <button class="nav-control-btn" onclick="prevSlide()" title="上一张 (←)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slide-counter">
+                        <span id="current-slide">1</span>
+                        <span>/</span>
+                        <span id="total-slides">-</span>
+                    </div>
+                    <button class="nav-control-btn" onclick="nextSlide()" title="下一张 (→)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 主演示区域 -->
+        <main class="main-content">
+            <!-- 浮动的sidebar打开按钮 -->
+            <button class="sidebar-open-btn" id="sidebar-open-btn" onclick="toggleSidebar()" title="打开控制面板">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- 幻灯片展示区域 -->
+            <div class="slide-container">
+                <div class="slide-viewport" id="slide-viewport">
+                    <iframe id="slide-frame" src="ppt/default/01-cover.html" frameborder="0"></iframe>
+                </div>
+                
+                <!-- 幻灯片计数器覆盖层 -->
+                <div class="slide-counter-overlay">
+                    <div class="slide-counter-badge">
+                        <span id="current-slide-overlay">1</span>
+                        <span class="counter-separator">/</span>
+                        <span id="total-slides-overlay">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 进度条 -->
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 帮助弹窗 -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>键盘快捷键</h3>
+                <button class="modal-close" onclick="closeHelp()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="shortcut-list">
+                    <div class="shortcut-item">
+                        <kbd>←</kbd> <kbd>→</kbd>
+                        <span>切换幻灯片</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Home</kbd> <kbd>End</kbd>
+                        <span>首页/末页</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Space</kbd>
+                        <span>下一张</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>F11</kbd>
+                        <span>全屏</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Esc</kbd>
+                        <span>退出全屏</span>
+                    </div>
+                </div>
+                <!-- 快速使用指南 -->
+                <div class="usage-guide">
+                    <h4>快速使用指南</h4>
+                    <ol>
+                        <li>下载或克隆项目后，直接双击 <code>index.html</code> 即可打开。</li>
+                        <li>在 <code>ppt/</code> 文件夹中新建子文件夹，并添加 <code>01-cover.html</code>、<code>02-content.html</code> 等幻灯片文件。</li>
+                        <li>刷新浏览器，点击侧边栏顶部的文件夹按钮即可切换到你的演示文稿。</li>
+                        <li>使用 <kbd>F11</kbd> 进入全屏模式，<kbd>Esc</kbd> 退出全屏。</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PPT画廊选择弹窗 -->
+    <div id="folder-selector-modal" class="modal">
+        <div class="modal-content ppt-gallery">
+            <div class="modal-header">
+                <h3>选择PPT演示文稿</h3>
+                <button class="modal-close" onclick="closeFolderSelector()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="gallery-intro">浏览所有可用的PPT演示文稿：</p>
+                
+                <!-- PPT画廊网格 -->
+                <div class="ppt-gallery-grid" id="ppt-gallery-grid">
+                    <!-- 内容将通过JavaScript动态生成 -->
+                </div>
+                
+                <!-- 自定义文件夹输入 -->
+                <div class="custom-folder-section">
+                    <div class="custom-folder-input">
+                        <label>或输入自定义PPT文件夹路径：</label>
+                        <input type="text" id="custom-folder-path" placeholder="例如：ppt/my-presentation">
+                        <button onclick="selectCustomFolder()">打开</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端底部导航 -->
+    <div class="mobile-nav">
+        <button class="mobile-nav-btn" onclick="prevSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="mobile-nav-btn" onclick="toggleSidebar()">
+            <i class="fas fa-list"></i>
+        </button>
+        <button class="mobile-nav-btn" onclick="nextSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+    
+    <!-- 缩放控制器和功能面板入口已移至侧边栏 -->
+
+
+
+    <!-- JavaScript 文件 -->
+    <script src="ppt-list.js"></script>
+    <script src="config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/keyboard.js"></script>
+    <script src="assets/js/code-highlight.js"></script>
+    <script src="assets/js/presentation-timer.js"></script>
+    <script src="assets/js/sidebar-thumbnails.js"></script>
+    <script src="assets/js/layout-templates.js"></script>
+    <script src="assets/js/pdf-export.js"></script>
+    
+    <!-- 初始化脚本 -->
+    <script>
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 检查是否首次访问
+            if (!localStorage.getItem('visited')) {
+                document.getElementById('welcome-overlay').style.display = 'flex';
+                localStorage.setItem('visited', 'true');
+            }
+            
+            // 初始化PPT
+            initializePPT();
+            
+            // 确保缩放控制器被初始化
+            setTimeout(() => {
+                if (typeof initializeZoomController === 'function') {
+                    initializeZoomController();
+                }
+            }, 200);
+        });
+    </script>
 </body>
-</html>
+</html> 

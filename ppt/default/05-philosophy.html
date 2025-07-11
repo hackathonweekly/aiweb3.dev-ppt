@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设计理念</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 80px;
+            overflow: hidden;
+            position: relative;
+        }
+        .philosophy-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .philosophy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .header-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon-gradient {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .comparison-old {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+        }
+        .comparison-new {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+        }
+        .ai-badge {
+            background: linear-gradient(45deg, #e17055, #d63031);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(214, 48, 49, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 标题部分 -->
+        <div class="text-center mb-8">
+            <h1 class="text-5xl font-bold text-white mb-4">
+                🎨 设计理念
+            </h1>
+            <p class="text-xl text-white/90 font-light">
+                零依赖 • AI驱动 • 面向未来的演示解决方案
+            </p>
+        </div>
+        
+        <!-- 核心理念 -->
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <div class="philosophy-card rounded-xl p-6 text-center">
+                <div class="text-4xl mb-4">🚀</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">零依赖设计</h3>
+                <p class="text-sm text-gray-600">
+                    无需安装 Node.js、Python 或任何开发工具<br>
+                    只要有浏览器就能使用
+                </p>
+            </div>
+            
+            <div class="philosophy-card rounded-xl p-6 text-center">
+                <div class="text-4xl mb-4">🤖</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">AI 时代优化</h3>
+                <p class="text-sm text-gray-600">
+                    专为 Cursor、Claude 等AI编辑器设计<br>
+                    让AI帮你创建专业PPT
+                </p>
+            </div>
+            
+            <div class="philosophy-card rounded-xl p-6 text-center">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">效率革命</h3>
+                <p class="text-sm text-gray-600">
+                    告别模板束缚<br>
+                    每个幻灯片都是独立的艺术品
+                </p>
+            </div>
+        </div>
+        
+        <!-- 对比展示 -->
+        <div class="grid grid-cols-2 gap-8">
+            <!-- 传统方式 -->
+            <div class="philosophy-card rounded-xl p-6">
+                <div class="flex items-center mb-4">
+                    <div class="comparison-old w-4 h-4 rounded-full mr-3"></div>
+                    <h3 class="text-xl font-semibold text-gray-800">传统 PPT 工具</h3>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-times text-red-500 mr-2"></i>
+                        <span>需要安装大型软件（PowerPoint、WPS等）</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-times text-red-500 mr-2"></i>
+                        <span>模板固化，设计受限</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-times text-red-500 mr-2"></i>
+                        <span>兼容性问题，版本冲突</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-times text-red-500 mr-2"></i>
+                        <span>难以与AI工具协作</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-times text-red-500 mr-2"></i>
+                        <span>制作精美PPT需要专业技能</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 现代方式 -->
+            <div class="philosophy-card rounded-xl p-6">
+                <div class="flex items-center mb-4">
+                    <div class="comparison-new w-4 h-4 rounded-full mr-3"></div>
+                    <h3 class="text-xl font-semibold text-gray-800">HTML PPT 模板</h3>
+                    <div class="ai-badge ml-2">AI优化</div>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>双击即用，无需安装任何软件</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>无限设计可能，AI生成精美样式</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>完美跨平台，任何设备都能使用</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>与Cursor等AI编辑器完美集成</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check text-green-500 mr-2"></i>
+                        <span>零技术门槛，AI帮你做设计</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部标语 -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+            <p class="text-white/80 text-lg font-light">
+                "在AI时代，创造力比工具更重要"
+            </p>
+            <p class="text-white/60 text-sm mt-2">
+                让 AI 处理技术细节，你专注于内容创作
+            </p>
+        </div>
+    </div>
+</body>
+</html> 

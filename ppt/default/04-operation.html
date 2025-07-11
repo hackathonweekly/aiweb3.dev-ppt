@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本操作</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .slide-container {
+            width: 100vw;
+            height: 100vh;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 60px 80px;
+            overflow: hidden;
+            position: relative;
+        }
+        .shortcut-item {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .shortcut-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .keyboard-key {
+            background: #374151;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .section-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .header-gradient {
+            background: linear-gradient(45deg, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .icon-gradient {
+            background: linear-gradient(45deg, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- 标题部分 -->
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-bold header-gradient mb-4">
+                ⌨️ 基本操作
+            </h1>
+            <p class="text-xl text-gray-700 font-light">
+                掌握快捷键，提升演示效率
+            </p>
+        </div>
+        
+        <!-- 内容布局 -->
+        <div class="grid grid-cols-2 gap-8">
+            <!-- 左侧：快捷键列表 -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-keyboard icon-gradient mr-3"></i>
+                    快捷键大全
+                </h2>
+                
+                <div class="space-y-3">
+                    <!-- 基本导航 -->
+                    <div class="shortcut-item rounded-xl p-4 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-arrow-right text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">下一张幻灯片</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="keyboard-key">→</span>
+                            <span class="text-gray-400">或</span>
+                            <span class="keyboard-key">Space</span>
+                        </div>
+                    </div>
+                    
+                    <div class="shortcut-item rounded-xl p-4 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-arrow-left text-blue-500 mr-3"></i>
+                            <span class="text-gray-700">上一张幻灯片</span>
+                        </div>
+                        <div>
+                            <span class="keyboard-key">←</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 演示功能 -->
+                    <div class="shortcut-item rounded-xl p-4 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-expand text-green-500 mr-3"></i>
+                            <span class="text-gray-700">全屏演示</span>
+                        </div>
+                        <div>
+                            <span class="keyboard-key">F11</span>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <!-- 高级功能 -->
+                    <div class="shortcut-item rounded-xl p-4 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-orange-500 mr-3"></i>
+                            <span class="text-gray-700">演示计时器</span>
+                        </div>
+                        <div>
+                            <span class="keyboard-key">Alt</span>
+                            <span class="text-gray-400 mx-1">+</span>
+                            <span class="keyboard-key">T</span>
+                        </div>
+                    </div>
+                    
+
+                    
+
+                    
+                    <div class="shortcut-item rounded-xl p-4 flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-square text-gray-500 mr-3"></i>
+                            <span class="text-gray-700">黑屏模式</span>
+                        </div>
+                        <div>
+                            <span class="keyboard-key">B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧：操作指南 -->
+            <div class="space-y-6">
+                <!-- 项目切换 -->
+                <div class="section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-folder-open icon-gradient text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">切换不同PPT项目</h3>
+                    </div>
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <div class="flex items-start">
+                            <span class="inline-block w-6 h-6 bg-orange-500 text-white rounded-full text-xs flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">1</span>
+                            <span>点击工具栏的文件夹图标</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="inline-block w-6 h-6 bg-orange-500 text-white rounded-full text-xs flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">2</span>
+                            <span>选择想要查看的项目</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="inline-block w-6 h-6 bg-orange-500 text-white rounded-full text-xs flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">3</span>
+                            <span>立即切换到新的PPT内容</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 演示技巧 -->
+                <div class="section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-lightbulb icon-gradient text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">演示技巧</h3>
+                    </div>
+                    <div class="space-y-3 text-sm text-gray-600">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>使用 F11 进入全屏获得最佳体验</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>演示前先熟悉快捷键操作</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>可使用演示计时器控制时间</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span>B键可临时黑屏暂停演示</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 兼容性 -->
+                <div class="section-card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-globe icon-gradient text-2xl mr-3"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">设备兼容性</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-desktop text-blue-500 text-xl mb-2"></i>
+                            <div class="text-sm text-gray-600">桌面端</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-mobile-alt text-green-500 text-xl mb-2"></i>
+                            <div class="text-sm text-gray-600">移动端</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-tablet-alt text-purple-500 text-xl mb-2"></i>
+                            <div class="text-sm text-gray-600">平板端</div>
+                        </div>
+                        <div class="text-center p-3 bg-gray-50 rounded-lg">
+                            <i class="fas fa-tv text-orange-500 text-xl mb-2"></i>
+                            <div class="text-sm text-gray-600">投影设备</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

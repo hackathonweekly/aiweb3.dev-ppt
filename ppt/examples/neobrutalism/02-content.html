@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neobrutalism PPT - 核心特点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../../assets/vendor/fontawesome/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+        }
+        .neo-shadow {
+            box-shadow: 8px 8px 0px #000000;
+        }
+        .neo-border {
+            border: 4px solid #000000;
+        }
+        .pulse-scale {
+            animation: pulseScale 3s infinite;
+        }
+        @keyframes pulseScale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Neobrutalism 内容页 -->
+<div class="min-h-screen bg-green-400 relative overflow-hidden">
+    <!-- 背景装饰 -->
+    <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-16 left-16 w-20 h-20 bg-red-500 neo-border rotate-45"></div>
+        <div class="absolute top-32 right-24 w-16 h-16 bg-blue-500 neo-border -rotate-12"></div>
+        <div class="absolute bottom-32 left-24 w-12 h-12 bg-yellow-400 neo-border rotate-45"></div>
+        <div class="absolute bottom-16 right-16 w-24 h-24 bg-purple-500 neo-border -rotate-45"></div>
+    </div>
+    
+    <!-- 主要内容 -->
+    <div class="relative z-10 min-h-screen flex flex-col p-12">
+        <!-- 标题 -->
+        <div class="mb-12">
+            <h1 class="text-6xl font-black text-black mb-4 uppercase -rotate-2 slide-in">
+                核心特点
+            </h1>
+            <div class="bg-black text-green-400 px-6 py-2 neo-border inline-block rotate-1">
+                <p class="text-xl font-bold uppercase">CORE FEATURES</p>
+            </div>
+        </div>
+        
+        <!-- 特点网格 -->
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+            <!-- 特点1 -->
+            <div class="bg-red-500 text-white p-8 neo-border neo-shadow rotate-2 pulse-scale">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-explosion text-5xl mr-4"></i>
+                    <h2 class="text-3xl font-black uppercase">视觉冲击</h2>
+                </div>
+                <ul class="text-xl font-bold space-y-3">
+                    <li>• 大胆的色彩对比</li>
+                    <li>• 粗体字体设计</li>
+                    <li>• 不规则布局</li>
+                    <li>• 强烈的阴影效果</li>
+                </ul>
+            </div>
+            
+            <!-- 特点2 -->
+            <div class="bg-blue-500 text-white p-8 neo-border neo-shadow -rotate-2 pulse-scale">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-palette text-5xl mr-4"></i>
+                    <h2 class="text-3xl font-black uppercase">反设计原则</h2>
+                </div>
+                <ul class="text-xl font-bold space-y-3">
+                    <li>• 打破传统规则</li>
+                    <li>• 故意的"粗糙"感</li>
+                    <li>• 实验性布局</li>
+                    <li>• 挑战观众期待</li>
+                </ul>
+            </div>
+            
+            <!-- 特点3 -->
+            <div class="bg-yellow-400 text-black p-8 neo-border neo-shadow rotate-1 pulse-scale">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-rocket text-5xl mr-4"></i>
+                    <h2 class="text-3xl font-black uppercase">高能表达</h2>
+                </div>
+                <ul class="text-xl font-bold space-y-3">
+                    <li>• 强烈的情感传达</li>
+                    <li>• 动态的视觉元素</li>
+                    <li>• 直接的信息传递</li>
+                    <li>• 记忆深刻的体验</li>
+                </ul>
+            </div>
+            
+            <!-- 特点4 -->
+            <div class="bg-purple-500 text-white p-8 neo-border neo-shadow -rotate-1 pulse-scale">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-crown text-5xl mr-4"></i>
+                    <h2 class="text-3xl font-black uppercase">个性表达</h2>
+                </div>
+                <ul class="text-xl font-bold space-y-3">
+                    <li>• 独特的品牌声音</li>
+                    <li>• 大胆的创意表达</li>
+                    <li>• 打破同质化</li>
+                    <li>• 令人印象深刻</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 底部标语 -->
+        <div class="mt-12 text-center">
+            <div class="bg-black text-green-400 px-12 py-6 neo-border inline-block rotate-2">
+                <p class="text-3xl font-black uppercase tracking-wider">
+                    DARE TO BE DIFFERENT!
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 装饰性元素 -->
+    <div class="absolute top-20 left-1/2 transform -translate-x-1/2 opacity-10">
+        <p class="text-black font-black text-9xl uppercase -rotate-45">BRUTAL</p>
+    </div>
+</div>
+
+</body>
+</html> 

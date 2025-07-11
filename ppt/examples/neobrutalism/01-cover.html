@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neobrutalism PPT - 封面</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../../../assets/vendor/fontawesome/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Space Grotesk', sans-serif;
+            overflow: hidden;
+        }
+        .neo-shadow {
+            box-shadow: 8px 8px 0px #000000;
+        }
+        .neo-border {
+            border: 4px solid #000000;
+        }
+        .glitch {
+            animation: glitch 2s infinite;
+        }
+        @keyframes glitch {
+            0%, 100% { transform: translate(0); }
+            10% { transform: translate(-2px, -2px); }
+            20% { transform: translate(2px, 2px); }
+            30% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            50% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            70% { transform: translate(-2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            90% { transform: translate(-2px, -2px); }
+        }
+        .rotate-text {
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Neobrutalism 封面页 -->
+<div class="min-h-screen bg-yellow-400 relative overflow-hidden">
+    <!-- 背景图形 -->
+    <div class="absolute top-10 left-10 w-40 h-40 bg-red-500 neo-border neo-shadow rotate-45 opacity-80"></div>
+    <div class="absolute top-20 right-20 w-32 h-32 bg-blue-500 neo-border neo-shadow -rotate-12"></div>
+    <div class="absolute bottom-20 left-1/4 w-24 h-24 bg-green-500 neo-border neo-shadow rotate-45"></div>
+    <div class="absolute bottom-10 right-10 w-36 h-36 bg-purple-500 neo-border neo-shadow -rotate-45"></div>
+    
+    <!-- 主要内容 -->
+    <div class="relative z-10 min-h-screen flex flex-col items-center justify-center p-8">
+        <!-- 主标题 -->
+        <div class="text-center mb-16">
+            <h1 class="text-8xl font-black text-black mb-8 leading-none glitch rotate-text">
+                BRUTAL
+                <br>
+                <span class="text-red-500 -rotate-12 inline-block">PPT</span>
+            </h1>
+            
+            <div class="bg-black text-yellow-400 px-8 py-4 neo-border inline-block -rotate-3 mb-8">
+                <h2 class="text-4xl font-bold uppercase tracking-wider">
+                    新野兽派演示模板
+                </h2>
+            </div>
+        </div>
+        
+        <!-- 特色标签 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl">
+            <div class="bg-red-500 text-white px-6 py-4 neo-border neo-shadow rotate-3 text-center">
+                <i class="fas fa-bolt text-3xl mb-2"></i>
+                <p class="font-bold uppercase text-sm">高冲击力</p>
+            </div>
+            
+            <div class="bg-blue-500 text-white px-6 py-4 neo-border neo-shadow -rotate-3 text-center">
+                <i class="fas fa-fire text-3xl mb-2"></i>
+                <p class="font-bold uppercase text-sm">大胆设计</p>
+            </div>
+            
+            <div class="bg-green-500 text-white px-6 py-4 neo-border neo-shadow rotate-6 text-center">
+                <i class="fas fa-star text-3xl mb-2"></i>
+                <p class="font-bold uppercase text-sm">强对比</p>
+            </div>
+            
+            <div class="bg-purple-500 text-white px-6 py-4 neo-border neo-shadow -rotate-6 text-center">
+                <i class="fas fa-magic text-3xl mb-2"></i>
+                <p class="font-bold uppercase text-sm">反常规</p>
+            </div>
+        </div>
+        
+        <!-- 底部信息 -->
+        <div class="absolute bottom-8 left-8">
+            <div class="bg-black text-yellow-400 px-4 py-2 neo-border">
+                <p class="font-bold text-sm uppercase">Created by AI</p>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 right-8">
+            <div class="bg-red-500 text-white px-4 py-2 neo-border rotate-12">
+                <p class="font-bold text-sm uppercase">2024</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 装饰性文字 -->
+    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 -rotate-90">
+        <p class="text-black font-black text-xl uppercase tracking-widest opacity-20">
+            BREAK THE RULES
+        </p>
+    </div>
+    
+    <div class="absolute top-1/2 right-4 transform -translate-y-1/2 rotate-90">
+        <p class="text-black font-black text-xl uppercase tracking-widest opacity-20">
+            MAKE NOISE
+        </p>
+    </div>
+</div>
+
+</body>
+</html> 
