@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛道介绍 - AI³ 广州站迷你黑客松</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .slide-content {
+            width: 100%;
+            max-width: 1400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 1rem;
+        }
+        .slide-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .card {
+            padding: 1.5rem;
+            border: 4px solid black;
+            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+            color: black;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide bg-gradient-to-br from-purple-600 to-pink-600 text-white">
+        <div class="slide-content">
+            <h1 class="slide-title relative">
+                <span class="bg-yellow-400 text-black px-4 py-1 inline-block rotate-2 border-4 border-black shadow-[5px_5px_0px_0px_rgba(0,0,0,0.5)]">赛道介绍</span>
+            </h1>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <!-- Left Column: Tech Innovation Track -->
+                <div class="col-span-1">
+                    <div class="card bg-gradient-to-br from-blue-100 to-cyan-100 rotate-1 mb-4 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 text-white p-3 rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mr-4">
+                                <i class="fas fa-microchip text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold border-b-4 border-black pb-2">Tech Innovation | 技术创新赛道</h2>
+                        </div>
+                        
+                        <!-- Prize Money -->
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-coins text-yellow-600 mr-2"></i>奖金设置（人民币）
+                            </h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🥇</span>
+                                    <div class="bg-yellow-500 text-white px-3 py-1 border-2 border-black font-bold mr-2">一等奖 1名</div>
+                                    <div class="bg-red-500 text-white px-3 py-1 border-2 border-black font-bold">¥1000</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🥈</span>
+                                    <div class="bg-gray-400 text-white px-3 py-1 border-2 border-black font-bold mr-2">二等奖 1名</div>
+                                    <div class="bg-blue-500 text-white px-3 py-1 border-2 border-black font-bold">¥800</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🥉</span>
+                                    <div class="bg-orange-400 text-white px-3 py-1 border-2 border-black font-bold mr-2">三等奖 1名</div>
+                                    <div class="bg-green-500 text-white px-3 py-1 border-2 border-black font-bold">¥500</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🌟</span>
+                                    <div class="bg-pink-400 text-white px-3 py-1 border-2 border-black font-bold mr-2">最佳Vibe奖 1名</div>
+                                    <div class="bg-pink-600 text-white px-3 py-1 border-2 border-black font-bold">¥188</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rules -->
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-clipboard-list text-blue-600 mr-2"></i>赛道规则
+                            </h3>
+                            <div class="bg-white p-4 border-2 border-black">
+                                <p class="text-lg mb-2"><strong>开发要求：</strong>需使用AI代码助手（如Cursor、Copilot等）从零开始完成产品设计与开发</p>
+                                <p class="text-lg"><strong>提交要求：</strong>需提交完整开发过程记录（含AI工具使用截图或日志）</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Evaluation Criteria -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-star text-yellow-600 mr-2"></i>评审标准（总分100%）
+                            </h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <div class="bg-red-500 text-white w-12 h-8 flex items-center justify-center font-bold border-2 border-black mr-3">30%</div>
+                                    <span class="text-lg font-bold">创新性：</span>
+                                    <span class="ml-2">项目创意独特性、解决问题的新思路</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-blue-500 text-white w-12 h-8 flex items-center justify-center font-bold border-2 border-black mr-3">30%</div>
+                                    <span class="text-lg font-bold">技术难度：</span>
+                                    <span class="ml-2">技术选型复杂度、实现方案的挑战性</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-green-500 text-white w-12 h-8 flex items-center justify-center font-bold border-2 border-black mr-3">20%</div>
+                                    <span class="text-lg font-bold">完成度：</span>
+                                    <span class="ml-2">功能完整性、可演示性、落地可行性</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-purple-500 text-white w-12 h-8 flex items-center justify-center font-bold border-2 border-black mr-3">20%</div>
+                                    <span class="text-lg font-bold">AI工具应用：</span>
+                                    <span class="ml-2">AI助手的深度融合度、提效价值体现</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Blockchain for Good Track -->
+                <div class="col-span-1">
+                    <div class="card bg-gradient-to-br from-green-100 to-emerald-100 -rotate-1 mb-4 h-full">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-600 text-white p-3 rounded-full border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mr-4">
+                                <i class="fas fa-heart text-2xl"></i>
+                            </div>
+                            <h2 class="text-3xl font-bold border-b-4 border-black pb-2">Blockchain for Good | 社会价值赛道</h2>
+                        </div>
+                        
+                        <div class="bg-yellow-200 p-3 border-2 border-black mb-4">
+                            <p class="font-bold text-center">由 Blockchain for Good Alliance（BGA）赞助支持</p>
+                        </div>
+                        
+                        <!-- Prize Money -->
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-coins text-yellow-600 mr-2"></i>奖金设置（美元）
+                            </h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🥇</span>
+                                    <div class="bg-yellow-500 text-white px-3 py-1 border-2 border-black font-bold mr-2">一等奖 1名</div>
+                                    <div class="bg-red-500 text-white px-3 py-1 border-2 border-black font-bold">250 USDT</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🥈</span>
+                                    <div class="bg-gray-400 text-white px-3 py-1 border-2 border-black font-bold mr-2">二等奖 1名</div>
+                                    <div class="bg-blue-500 text-white px-3 py-1 border-2 border-black font-bold">150 USDT</div>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-2xl mr-3">🥉</span>
+                                    <div class="bg-orange-400 text-white px-3 py-1 border-2 border-black font-bold mr-2">三等奖 1名</div>
+                                    <div class="bg-green-500 text-white px-3 py-1 border-2 border-black font-bold">100 USDT</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Rules -->
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-clipboard-list text-green-600 mr-2"></i>赛道规则
+                            </h3>
+                            <div class="bg-white p-4 border-2 border-black">
+                                <p class="text-lg mb-2"><strong>项目要求：</strong>需聚焦社会价值落地，符合联合国可持续发展目标（SDGs）相关方向</p>
+                                <p class="text-lg mb-2"><strong>限制：</strong>纯个人工具类项目不参与该赛道评选</p>
+                                <p class="text-lg"><strong>评审机制：</strong>重点考察项目的社会影响力与区块链技术结合度</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Evaluation Criteria -->
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-star text-yellow-600 mr-2"></i>评审标准（总分100%）
+                            </h3>
+                            <div class="space-y-1 text-sm">
+                                <div class="flex items-center">
+                                    <div class="bg-red-500 text-white w-10 h-6 flex items-center justify-center font-bold border-2 border-black mr-2 text-xs">30</div>
+                                    <span class="font-bold">社会影响力：</span>
+                                    <span class="ml-1">该项目对社会的影响有多大？</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-blue-500 text-white w-10 h-6 flex items-center justify-center font-bold border-2 border-black mr-2 text-xs">20</div>
+                                    <span class="font-bold">技术实施：</span>
+                                    <span class="ml-1">区块链技术的应用效果如何？</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-green-500 text-white w-10 h-6 flex items-center justify-center font-bold border-2 border-black mr-2 text-xs">20</div>
+                                    <span class="font-bold">创新性：</span>
+                                    <span class="ml-1">产品理念是否新颖？</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-purple-500 text-white w-10 h-6 flex items-center justify-center font-bold border-2 border-black mr-2 text-xs">20</div>
+                                    <span class="font-bold">可持续性：</span>
+                                    <span class="ml-1">项目能否实现自给自足？</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="bg-pink-500 text-white w-10 h-6 flex items-center justify-center font-bold border-2 border-black mr-2 text-xs">10</div>
+                                    <span class="font-bold">用户体验：</span>
+                                    <span class="ml-1">使用是否便捷？</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- BGA Info -->
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 flex items-center">
+                                <i class="fas fa-seedling text-green-600 mr-2"></i>BGA 简介
+                            </h3>
+                            <div class="bg-white p-4 border-2 border-black">
+                                <p class="text-sm mb-2">🌱 由 Bybit 于 2024年4月发起的非营利倡议</p>
+                                <p class="text-sm mb-2">🎯 致力于以区块链技术服务社会公益</p>
+                                <p class="text-sm mb-2">🌍 推动技术落地解决现实问题，与联合国17项SDGs一致</p>
+                                <p class="text-sm">🔗 官网：www.chainforgood.org | X：@ChainForGood</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

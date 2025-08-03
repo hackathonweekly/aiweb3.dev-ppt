@@ -32,20 +32,24 @@ window.pptProjects = {
         badgeClass: 'event',
         files: [
             '01-cover.html',
+            '06-schedule.html',
             '02-introduction.html',
+            '11-workshop.html',
             // '03-theme.html',
-            // '04-details.html',
-            '05-schedule.html',
-            // '06-participants.html',
-            // '07-benefits.html',
-            '08-team-guide.html',
-            '09-mentors.html',
-            '10-awards.html',
-            '11-submission.html',
-            '12-partners.html',
-            '13-contact.html',
-            '14-awards-ceremony.html',
-            '15-thanks.html'
+            '04-tracks.html',
+            // '05-details.html',
+            
+            // '07-participants.html',
+            // '08-benefits.html',
+            '09-team-guide.html',
+            '10-mentors.html',
+            
+            // '12-awards.html',
+            '13-submission.html',
+            '14-partners.html',
+            '15-contact.html',
+            '16-awards-ceremony.html',
+            '17-thanks.html'
         ]
     },
     'default': {
